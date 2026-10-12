@@ -1,0 +1,10 @@
+arch,metric,cv_heldout_mean,test_mean,drop_cv_minus_test,drop_sd
+resnet50,accuracy,0.6027,0.6496,-0.0469,0.0567
+resnet50,f1,0.5287,0.6263,-0.0976,0.1573
+resnet50,roc_auc,0.674,0.7187,-0.0447,0.0827
+efficientnet_b0,accuracy,0.5242,0.6378,-0.1135,0.1107
+efficientnet_b0,f1,0.4883,0.6452,-0.1569,0.2196
+efficientnet_b0,roc_auc,0.5986,0.7655,-0.1668,0.1379
+mobilenet_v2,accuracy,0.5837,0.6619,-0.0782,0.0905
+mobilenet_v2,f1,0.4802,0.6267,-0.1466,0.2043
+mobilenet_v2,roc_auc,0.6475,0.76,-0.1125,0.0911

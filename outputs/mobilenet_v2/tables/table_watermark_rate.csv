@@ -1,0 +1,5 @@
+split,cls,n,watermarked,watermark_rate
+pool,authentic,292,0,0.0
+pool,counterfeit,285,0,0.0
+test,authentic,99,0,0.0
+test,counterfeit,90,0,0.0

@@ -1,0 +1,25 @@
+arch,model,true,predicted,count
+resnet50,15-model mean (per model),authentic,authentic,63.8
+resnet50,15-model mean (per model),authentic,counterfeit,35.2
+resnet50,15-model mean (per model),counterfeit,authentic,27.867
+resnet50,15-model mean (per model),counterfeit,counterfeit,53.133
+resnet50,final model,authentic,authentic,60.0
+resnet50,final model,authentic,counterfeit,39.0
+resnet50,final model,counterfeit,authentic,30.0
+resnet50,final model,counterfeit,counterfeit,51.0
+efficientnet_b0,15-model mean (per model),authentic,authentic,52.533
+efficientnet_b0,15-model mean (per model),authentic,counterfeit,46.467
+efficientnet_b0,15-model mean (per model),counterfeit,authentic,18.733
+efficientnet_b0,15-model mean (per model),counterfeit,counterfeit,62.267
+efficientnet_b0,final model,authentic,authentic,62.0
+efficientnet_b0,final model,authentic,counterfeit,37.0
+efficientnet_b0,final model,counterfeit,authentic,16.0
+efficientnet_b0,final model,counterfeit,counterfeit,65.0
+mobilenet_v2,15-model mean (per model),authentic,authentic,65.067
+mobilenet_v2,15-model mean (per model),authentic,counterfeit,33.933
+mobilenet_v2,15-model mean (per model),counterfeit,authentic,26.933
+mobilenet_v2,15-model mean (per model),counterfeit,counterfeit,54.067
+mobilenet_v2,final model,authentic,authentic,69.0
+mobilenet_v2,final model,authentic,counterfeit,30.0
+mobilenet_v2,final model,counterfeit,authentic,20.0
+mobilenet_v2,final model,counterfeit,counterfeit,61.0

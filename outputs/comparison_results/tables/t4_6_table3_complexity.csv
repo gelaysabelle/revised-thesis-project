@@ -1,0 +1,4 @@
+arch,total_params_M,phase1_trainable_params_M,phase2_trainable_params_M,flops_M_macs,conv_linear_macs_M,model_size_MB,inference_ms_per_image,inference_device,inference_ms_per_image_cpu,peak_vram_inference_MB,peak_vram_training_MB,train_min_per_epoch_all,train_min_per_epoch_phase2,train_min_per_run_cv_mean,train_min_final_model,hardware
+resnet50,23.5101,0.002,4.4646,8341.0964,8341.0964,89.989,8.4312,cuda,153.3076,328.8716,722.2656,0.063,0.0631,1.7853,2.0034,Tesla T4
+efficientnet_b0,4.0088,0.0013,1.1307,784.1133,784.1133,15.5816,7.985,cuda,42.8733,86.521,437.8403,0.0565,0.056,1.6792,1.6377,Tesla T4
+mobilenet_v2,2.2252,0.0013,0.8874,611.2141,611.2141,8.7247,5.1782,cuda,36.9003,65.8701,415.2568,0.0531,0.0531,1.5977,1.694,Tesla T4

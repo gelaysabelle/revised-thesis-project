@@ -1,0 +1,4 @@
+model_a,model_b,n_pairs,mean_auc_diff,n_test_over_n_train,t,df,p_nb,p_holm,verdict
+resnet50,efficientnet_b0,15,0.0754,0.336,2.5651,14,0.0224,0.0673,no reliable difference
+resnet50,mobilenet_v2,15,0.0265,0.336,0.9119,14,0.3773,0.4111,no reliable difference
+efficientnet_b0,mobilenet_v2,15,-0.0489,0.336,-1.3276,14,0.2056,0.4111,no reliable difference

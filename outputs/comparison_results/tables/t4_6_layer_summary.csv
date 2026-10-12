@@ -1,0 +1,4 @@
+arch,n_layers,macs_M,weights_M,heaviest_layer,heaviest_layer_share_of_macs,macs_share_1x1 conv or linear,weights_share_1x1 conv or linear,macs_share_k x k conv,weights_share_k x k conv,macs_share_depthwise or grouped conv,weights_share_depthwise or grouped conv
+resnet50,54,8341.0964,23.457,conv1,0.0289,0.5186,0.5171,0.4814,0.4829,,
+efficientnet_b0,82,784.1133,3.9668,features.8.0,0.0522,0.8819,0.9539,0.0282,0.0002,0.0899,0.0459
+mobilenet_v2,53,611.2141,2.191,features.18.0,0.067,0.8946,0.9703,0.0362,0.0004,0.0692,0.0293

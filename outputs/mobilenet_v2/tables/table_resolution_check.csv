@@ -1,0 +1,3 @@
+arch,input_size,seed,fold,val_auc,val_loss,best_epoch
+mobilenet_v2,224,42,0,0.663109756097561,0.634447213721602,19
+mobilenet_v2,320,42,0,0.5952743902439024,0.6611021283554704,23

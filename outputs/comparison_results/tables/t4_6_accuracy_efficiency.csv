@@ -1,0 +1,4 @@
+arch,test_auc,test_auc_sd,cv_auc,cv_auc_sd,final_test_auc,total_params_M,flops_M_macs,inference_ms_per_image,model_size_MB
+resnet50,0.7187,0.0161,0.674,0.08,0.7182,23.5101,8341.0964,8.4312,89.989
+efficientnet_b0,0.7655,0.0278,0.5986,0.1142,0.8225,4.0088,784.1133,7.985,15.5816
+mobilenet_v2,0.76,0.0174,0.6475,0.0795,0.7982,2.2252,611.2141,5.1782,8.7247

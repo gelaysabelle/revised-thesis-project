@@ -1,0 +1,2 @@
+arch,cv_f1,cv_roc_auc,test_f1,test_roc_auc,final_model_test_roc_auc,params_M,flops_M_macs,inference_ms_per_image
+mobilenet_v2,0.4802,0.6475,0.6267,0.76,0.7982,2.2252,611.2141,5.1782

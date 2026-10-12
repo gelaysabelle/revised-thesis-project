@@ -1,0 +1,23 @@
+pooled out-of-fold (3 seeds stacked), ROC-AUC: ResNet50 0.700 [0.611, 0.790]; MobileNetV2 0.670 [0.592, 0.753]; EfficientNetB0 0.645 [0.557, 0.750].
+   ResNet50 vs EfficientNetB0: difference +0.055, Holm-adjusted interval [-0.036, +0.122], no reliable difference.
+   ResNet50 vs MobileNetV2: difference +0.031, Holm-adjusted interval [-0.016, +0.077], no reliable difference.
+   EfficientNetB0 vs MobileNetV2: difference -0.025, Holm-adjusted interval [-0.074, +0.033], no reliable difference.
+external test (15 models stacked), ROC-AUC: EfficientNetB0 0.763 [0.661, 0.883]; MobileNetV2 0.758 [0.643, 0.895]; ResNet50 0.714 [0.595, 0.841].
+   ResNet50 vs EfficientNetB0: difference -0.049, Holm-adjusted interval [-0.144, +0.009], no reliable difference.
+   ResNet50 vs MobileNetV2: difference -0.044, Holm-adjusted interval [-0.140, +0.011], no reliable difference.
+   EfficientNetB0 vs MobileNetV2: difference +0.005, Holm-adjusted interval [-0.065, +0.047], no reliable difference.
+external test (final model), ROC-AUC: EfficientNetB0 0.823 [0.720, 0.940]; MobileNetV2 0.798 [0.681, 0.934]; ResNet50 0.718 [0.581, 0.876].
+   ResNet50 vs EfficientNetB0: difference -0.104, Holm-adjusted interval [-0.211, -0.019], EfficientNetB0 better.
+   ResNet50 vs MobileNetV2: difference -0.080, Holm-adjusted interval [-0.158, -0.019], MobileNetV2 better.
+   EfficientNetB0 vs MobileNetV2: difference +0.024, Holm-adjusted interval [-0.029, +0.073], no reliable difference.
+Accuracy, F1 and recall, reliable differences only:
+   Recall, external test (15 models stacked), ResNet50 vs EfficientNetB0: EfficientNetB0 better (difference -0.113)
+   Accuracy, external test (final model), ResNet50 vs EfficientNetB0: EfficientNetB0 better (difference -0.089)
+   Accuracy, external test (final model), ResNet50 vs MobileNetV2: MobileNetV2 better (difference -0.106)
+   F1, external test (final model), ResNet50 vs EfficientNetB0: EfficientNetB0 better (difference -0.114)
+   F1, external test (final model), ResNet50 vs MobileNetV2: MobileNetV2 better (difference -0.113)
+McNemar: 5 of 12 comparisons show a difference after Holm correction.
+Nadeau-Bengio on the held-out AUCs: 0 of 3 comparisons show a difference after Holm correction.
+Generalisation, ROC-AUC change from held-out folds to test (positive = lower on test): ResNet50 -0.045; EfficientNetB0 -0.167; MobileNetV2 -0.112.
+Pareto-optimal on external test ROC-AUC vs inference latency: EfficientNetB0, MobileNetV2 | dominated: ResNet50
+Pareto-optimal on external test ROC-AUC vs model size: EfficientNetB0, MobileNetV2 | dominated: ResNet50

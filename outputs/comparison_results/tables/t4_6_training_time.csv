@@ -1,0 +1,4 @@
+arch,min_per_epoch_all,min_per_epoch_phase2,mean_epochs_trained,mean_best_epoch,mean_min_per_run,total_min_15_runs,final_model_min,total_min_all
+resnet50,0.063,0.063,28.2,25.267,1.785,26.779,2.003,28.783
+efficientnet_b0,0.056,0.056,29.533,25.933,1.679,25.188,1.638,26.826
+mobilenet_v2,0.053,0.053,30.0,27.8,1.598,23.965,1.694,25.659

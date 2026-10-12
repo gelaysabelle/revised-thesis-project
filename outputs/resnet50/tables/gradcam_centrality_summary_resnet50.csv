@@ -1,0 +1,5 @@
+category,centrality_score_mean,centrality_score_std,centrality_score_count,center_energy_fraction_mean,center_energy_fraction_std,center_energy_fraction_count
+FN,0.692,0.153,15,0.257,0.14,15
+FP,0.701,0.176,15,0.309,0.157,15
+TN,0.653,0.154,15,0.311,0.163,15
+TP,0.66,0.12,15,0.26,0.112,15

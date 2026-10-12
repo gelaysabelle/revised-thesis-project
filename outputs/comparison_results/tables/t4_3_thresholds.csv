@@ -1,0 +1,4 @@
+arch,theta_mean,theta_sd,theta_min,theta_max,n_runs,n_fallback_to_0_5,theta_fold_0,theta_fold_1,theta_fold_2,theta_fold_3,theta_fold_4,final_model_theta,final_model_theta_source,final_model_theta_fallback
+resnet50,0.4668,0.0435,0.396,0.5172,15,0,0.5004,0.4469,0.476,0.4095,0.5011,0.4149,pooled out-of-fold Youden,False
+efficientnet_b0,0.4056,0.0913,0.2663,0.6015,15,0,0.4399,0.3031,0.4199,0.3846,0.4807,0.3978,pooled out-of-fold Youden,False
+mobilenet_v2,0.4401,0.0754,0.3019,0.5499,15,0,0.4807,0.3482,0.4135,0.4783,0.4798,0.4244,pooled out-of-fold Youden,False

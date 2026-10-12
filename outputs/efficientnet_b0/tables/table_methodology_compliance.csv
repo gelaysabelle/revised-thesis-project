@@ -1,0 +1,70 @@
+chapter_section,requirement,expected,observed,status
+Data Gathering,Total number of images,800,735,FAIL
+Data Gathering,pool / authentic images,300,292,FAIL
+Data Gathering,pool / counterfeit images,300,263,FAIL
+Data Gathering,test / authentic images,100,99,FAIL
+Data Gathering,test / counterfeit images,100,81,FAIL
+Data Gathering,"Per class per brand: 75 images in the pool, 25 in the test set",all 16 cells on target,"9 cells differ [(('pool', 'authentic', 'Breitling'), 73), (('pool', 'authentic', 'Omega'), 74), (('pool', 'authentic', 'Rolex'), 70)]",FAIL
+Data Gathering,"Plain share about 40% (within 5 points) and equal in both classes, pool","35-45%, classes within 5 points","{'authentic': '40%', 'counterfeit': '38%'}",PASS
+Data Gathering,"Plain share about 40% (within 5 points) and equal in both classes, test set","35-45%, classes within 5 points","{'authentic': '39%', 'counterfeit': '36%'}",PASS
+Data Gathering,Plain share within 5 points of 40% in every brand and class,all 8 cells in 35-45%,2 cells outside,FAIL
+Data Gathering,No brand-website image in the external test set,0,39,FAIL
+Data Gathering,Brand-website images at most 20% of the authentic pool,<= 20%,39.7%,FAIL
+Data Gathering,Brand-website images at most half of the authentic Plain tier,<= 50%,100.0%,FAIL
+Data Gathering,No source appears in both pool and test set,no overlap,"['brand website', 'paterson jewellers', 'wsongtime']",FAIL
+Data Gathering,No source above 40% of the authentic class in the pool,<= 40%,60%,FAIL
+Data Gathering,No source above 40% of the counterfeit class in the pool,<= 40%,18%,PASS
+Data Gathering,No seller appears in both pool and test set,no overlap,9 shared,FAIL
+Data Gathering,At least 30 sellers in the authentic class,>= 30,57,PASS
+Data Gathering,At least 30 sellers in the counterfeit class,>= 30,21,FAIL
+Data Gathering,"At least 8 model references per brand, authentic",>= 8,"{'Breitling': 98, 'Omega': 82, 'Rolex': 80, 'Seiko': 100}",PASS
+Data Gathering,"At least 8 model references per brand, counterfeit",>= 8,"{'Breitling': 95, 'Omega': 78, 'Rolex': 67, 'Seiko': 97}",PASS
+Data Gathering,No model reference above 25% of its brand cell,<= 25%,max 6%,PASS
+Data Gathering,No Tier 3 (ambiguous) labels in the dataset,0,0,PASS
+Data Gathering,"Circular dial, front-facing, dial >= 60% of frame, expert validation, replica declaration",manual review,n/a,NOT VERIFIABLE
+Data Cleaning,Short side >= 400 px for every kept image,>= 400,400,PASS
+Data Cleaning,Laplacian variance at 320x320 >= 300 for every kept image,>= 300,396.2,PASS
+Data Cleaning,Images re-saved as JPEG at quality 95,95,95,PASS
+Data Cleaning,Subsampling to the per-cell targets before partitioning (step 7),SUBSAMPLE_TO_TARGET on,True,PASS
+Data Cleaning,Every removed image is listed with its stage and reason,table_removed_images_all.csv,found,PASS
+Data Cleaning,rembg applied to every image in both classes with identical settings,"mode 'full', all images ok",mode full,PASS
+Data Cleaning,No exact duplicate (MD5) remains,0,0,PASS
+Data Cleaning,No exact duplicate shared between pool and test set,0,0,PASS
+Data Partitioning,Groups larger than 5% of the pool are reviewed by hand,"0 groups, or reviewed",1 groups (see table_large_groups_review.csv),REVIEW
+Data Partitioning,No group spans pool and test set,0,4,FAIL
+Resizing,Cropped watch region >= 320 px on the short side (no upscaling),>= 320,320,PASS
+Resizing,Model input 320 x 320 with area interpolation,320,320,PASS
+Resizing,"224 vs 320 compared once on validation data, choice frozen",table_resolution_check.csv,found,PASS
+Normalization,ImageNet mean and standard deviation,"[.485,.456,.406] / [.229,.224,.225]","[0.485, 0.456, 0.406] / [0.229, 0.224, 0.225]",PASS
+Data Augmentation,No horizontal flip,none,none,PASS
+Data Augmentation,Training set only; same augmentations for both classes; none on validation or test,train only,EVAL_TF has no augmentation,BY DESIGN
+Data Partitioning,"Five folds, each pool image held out exactly once",5,5,PASS
+Data Partitioning,"About 408 training, 72 validation, 120 held-out images per fold",~408 / 72 / 120,372 / 72 / 111,PASS
+Data Partitioning,Every validation set has at least 48 images and 20 per class (D16),>= 48 / >= 20,"min 70 images, min per class 32",PASS
+Data Partitioning,Automatic assertions: no group or seller in more than one fold,assertions pass,passed,PASS
+Data Partitioning,Fold assignments saved once and reused,fold_assignments.csv,found,PASS
+Data Partitioning,Weighted random sampler on the training loader only,train only,make_loader,BY DESIGN
+Model Training and Optimization,Phase 1 learning rate,0.001,0.001,PASS
+Model Training and Optimization,Phase 2 learning rate,0.0001,0.0001,PASS
+Model Training and Optimization,Batch size,32,32,PASS
+Model Training and Optimization,Dropout before the final layer,0.4,0.4,PASS
+Model Training and Optimization,Early-stopping patience (phase 2),10,10,PASS
+Model Training and Optimization,"Adam, no learning-rate scheduler, binary cross-entropy, counterfeit = positive",as stated,fit_model / CLASS_TO_IDX,BY DESIGN
+Model Training and Optimization,efficientnet_b0: 15 runs (5 folds x 3 seeds),15,15,PASS
+Evaluation,"efficientnet_b0: each model scored on all 180 test images, once, with its own frozen threshold",[180],[180],PASS
+Model Training and Optimization,"Threshold from Youden's J on the validation set, fixed before held-out and test scoring",per run,stored in runs_<arch>.csv and in the final .pth,BY DESIGN
+Model Training and Optimization,Models are not ensembled and not retrained on the full pool,none,the 15 CV models are not ensembled or retrained; one extra deployment model is retrained on the full pool (D19),REVIEW
+Deployment package,efficientnet_b0: one .pth and one .pt for the final model,2 files,found,PASS
+Evaluation,"efficientnet_b0: final model at 0.3, 0.5, 0.7, its frozen threshold and the hindsight-best threshold",table written,found,PASS
+Shortcut Audit,"Audit completed before model training, five baselines",5 baselines,8 rows,PASS
+Shortcut Audit,No baseline above about 65% accuracy,<= 65%,"{'B1 file size + re-encode ratio': 0.688, 'B2 resolution, blur, brightness, colour histogram, JPEG quality': 0.81, 'B1p file size of the PROCESSED image (what the CNN sees)': 0.509, 'B2p PROCESSED image: size, sharpness, brightness, contrast, white share, edges, colour histogram': 0.607, 'B3 mask area + shape': 0.586, 'B4 background tier alone (metadata)': 0.299, 'B5 border-only CNN, raw images': 0.684, 'B5 border-only CNN, processed images': 0.552}",FAIL
+Evaluation,"Group bootstrap with 2,000 resamples",2000,2000,PASS
+Evaluation,"Sensitivity at fixed thresholds 0.3, 0.5, 0.7","[0.3, 0.5, 0.7]","[0.3, 0.5, 0.7]",PASS
+Evaluation,efficientnet_b0: all required result tables written,9 tables,"9 found, missing []",PASS
+Evaluation,efficientnet_b0: results within each background tier (CV and test),Plain and Uncontrolled,"['Plain', 'Uncontrolled']",PASS
+Evaluation,ROC curves of all three models on the same axes; McNemar + paired bootstrap + Holm between models,separate comparison notebook,not part of this notebook (per-image predictions are saved in predictions/),NOT RUN
+Grad-CAM,"efficientnet_b0: at most 60 images, at most 15 per outcome group",<= 60 / <= 15,"60 / {'TP': 15, 'TN': 15, 'FP': 15, 'FN': 15}",PASS
+Time and Space Complexity,efficientnet_b0: all six Table 3 metrics,6 metrics,6 found,PASS
+Time and Space Complexity,"efficientnet_b0: per-layer table, trainable parameters per phase, training memory, CPU latency, run times",all present,"6 of 6 columns, layer table found",PASS
+Limitations and Scope,Number of images excluded (including the 320-pixel rule and watermarks) is reported,table_cleaning_log.csv,found,PASS
+Limitations and Scope,Final watermark rate per class is reported,table_watermark_rate.csv,found,PASS

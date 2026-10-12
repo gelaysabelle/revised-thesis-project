@@ -1,0 +1,7 @@
+trade_off,model,pareto_optimal,dominated_by,dominance_significant
+latency,ResNet50,False,"EfficientNetB0, MobileNetV2",False
+latency,EfficientNetB0,True,,
+latency,MobileNetV2,True,,
+model size,ResNet50,False,"EfficientNetB0, MobileNetV2",False
+model size,EfficientNetB0,True,,
+model size,MobileNetV2,True,,

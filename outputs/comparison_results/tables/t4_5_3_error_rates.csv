@@ -1,0 +1,181 @@
+dimension,group,evaluated_on,arch,n_images,n_counterfeit_images,n_authentic_images,fnr,fpr
+brand,Breitling,pooled out-of-fold (3 seeds stacked),resnet50,148,75,73,0.3378,0.5297
+brand,Breitling,pooled out-of-fold (3 seeds stacked),efficientnet_b0,148,75,73,0.3867,0.6393
+brand,Breitling,pooled out-of-fold (3 seeds stacked),mobilenet_v2,148,75,73,0.3644,0.5114
+brand,Omega,pooled out-of-fold (3 seeds stacked),resnet50,136,62,74,0.414,0.2432
+brand,Omega,pooled out-of-fold (3 seeds stacked),efficientnet_b0,136,62,74,0.3065,0.3964
+brand,Omega,pooled out-of-fold (3 seeds stacked),mobilenet_v2,136,62,74,0.4462,0.2748
+brand,Rolex,pooled out-of-fold (3 seeds stacked),resnet50,121,51,70,0.5686,0.2286
+brand,Rolex,pooled out-of-fold (3 seeds stacked),efficientnet_b0,121,51,70,0.3464,0.6095
+brand,Rolex,pooled out-of-fold (3 seeds stacked),mobilenet_v2,121,51,70,0.3922,0.4476
+brand,Seiko,pooled out-of-fold (3 seeds stacked),resnet50,150,75,75,0.6089,0.2222
+brand,Seiko,pooled out-of-fold (3 seeds stacked),efficientnet_b0,150,75,75,0.5289,0.4133
+brand,Seiko,pooled out-of-fold (3 seeds stacked),mobilenet_v2,150,75,75,0.6311,0.3022
+tier,Plain,pooled out-of-fold (3 seeds stacked),resnet50,217,101,116,0.6634,0.1897
+tier,Plain,pooled out-of-fold (3 seeds stacked),efficientnet_b0,217,101,116,0.5941,0.4655
+tier,Plain,pooled out-of-fold (3 seeds stacked),mobilenet_v2,217,101,116,0.6568,0.3506
+tier,Uncontrolled,pooled out-of-fold (3 seeds stacked),resnet50,338,162,176,0.3621,0.3826
+tier,Uncontrolled,pooled out-of-fold (3 seeds stacked),efficientnet_b0,338,162,176,0.2798,0.5436
+tier,Uncontrolled,pooled out-of-fold (3 seeds stacked),mobilenet_v2,338,162,176,0.3457,0.4034
+source,ARF Factory,pooled out-of-fold (3 seeds stacked),resnet50,11,11,0,0.1515,
+source,ARF Factory,pooled out-of-fold (3 seeds stacked),efficientnet_b0,11,11,0,0.0909,
+source,ARF Factory,pooled out-of-fold (3 seeds stacked),mobilenet_v2,11,11,0,0.0606,
+source,AliExpress,pooled out-of-fold (3 seeds stacked),resnet50,20,20,0,0.1333,
+source,AliExpress,pooled out-of-fold (3 seeds stacked),efficientnet_b0,20,20,0,0.0667,
+source,AliExpress,pooled out-of-fold (3 seeds stacked),mobilenet_v2,20,20,0,0.2333,
+source,AllReplicaWatches,pooled out-of-fold (3 seeds stacked),resnet50,10,10,0,0.7,
+source,AllReplicaWatches,pooled out-of-fold (3 seeds stacked),efficientnet_b0,10,10,0,0.9,
+source,AllReplicaWatches,pooled out-of-fold (3 seeds stacked),mobilenet_v2,10,10,0,0.8667,
+source,BP Watch Factory,pooled out-of-fold (3 seeds stacked),resnet50,20,20,0,0.6667,
+source,BP Watch Factory,pooled out-of-fold (3 seeds stacked),efficientnet_b0,20,20,0,0.4333,
+source,BP Watch Factory,pooled out-of-fold (3 seeds stacked),mobilenet_v2,20,20,0,0.6667,
+source,Brand website,pooled out-of-fold (3 seeds stacked),resnet50,116,0,116,,0.1897
+source,Brand website,pooled out-of-fold (3 seeds stacked),efficientnet_b0,116,0,116,,0.4655
+source,Brand website,pooled out-of-fold (3 seeds stacked),mobilenet_v2,116,0,116,,0.3506
+source,Chrono24 PH dealer,pooled out-of-fold (3 seeds stacked),resnet50,176,0,176,,0.3826
+source,Chrono24 PH dealer,pooled out-of-fold (3 seeds stacked),efficientnet_b0,176,0,176,,0.5436
+source,Chrono24 PH dealer,pooled out-of-fold (3 seeds stacked),mobilenet_v2,176,0,176,,0.4034
+source,Clean Factory,pooled out-of-fold (3 seeds stacked),resnet50,21,21,0,0.3175,
+source,Clean Factory,pooled out-of-fold (3 seeds stacked),efficientnet_b0,21,21,0,0.2698,
+source,Clean Factory,pooled out-of-fold (3 seeds stacked),mobilenet_v2,21,21,0,0.2857,
+source,DukeReps,pooled out-of-fold (3 seeds stacked),resnet50,9,9,0,0.0,
+source,DukeReps,pooled out-of-fold (3 seeds stacked),efficientnet_b0,9,9,0,0.0,
+source,DukeReps,pooled out-of-fold (3 seeds stacked),mobilenet_v2,9,9,0,0.0741,
+source,FactoryRolex,pooled out-of-fold (3 seeds stacked),resnet50,6,6,0,0.2222,
+source,FactoryRolex,pooled out-of-fold (3 seeds stacked),efficientnet_b0,6,6,0,0.0556,
+source,FactoryRolex,pooled out-of-fold (3 seeds stacked),mobilenet_v2,6,6,0,0.1667,
+source,NecoClock,pooled out-of-fold (3 seeds stacked),resnet50,26,26,0,0.3974,
+source,NecoClock,pooled out-of-fold (3 seeds stacked),efficientnet_b0,26,26,0,0.4615,
+source,NecoClock,pooled out-of-fold (3 seeds stacked),mobilenet_v2,26,26,0,0.3974,
+source,ORF,pooled out-of-fold (3 seeds stacked),resnet50,1,1,0,1.0,
+source,ORF,pooled out-of-fold (3 seeds stacked),efficientnet_b0,1,1,0,0.3333,
+source,ORF,pooled out-of-fold (3 seeds stacked),mobilenet_v2,1,1,0,1.0,
+source,Paterson Jewellers,pooled out-of-fold (3 seeds stacked),resnet50,29,29,0,0.8621,
+source,Paterson Jewellers,pooled out-of-fold (3 seeds stacked),efficientnet_b0,29,29,0,0.7471,
+source,Paterson Jewellers,pooled out-of-fold (3 seeds stacked),mobilenet_v2,29,29,0,0.8161,
+source,Reddit Community,pooled out-of-fold (3 seeds stacked),resnet50,48,48,0,0.4375,
+source,Reddit Community,pooled out-of-fold (3 seeds stacked),efficientnet_b0,48,48,0,0.3819,
+source,Reddit Community,pooled out-of-fold (3 seeds stacked),mobilenet_v2,48,48,0,0.5139,
+source,SMF,pooled out-of-fold (3 seeds stacked),resnet50,1,1,0,0.0,
+source,SMF,pooled out-of-fold (3 seeds stacked),efficientnet_b0,1,1,0,0.0,
+source,SMF,pooled out-of-fold (3 seeds stacked),mobilenet_v2,1,1,0,0.3333,
+source,SwissWatch,pooled out-of-fold (3 seeds stacked),resnet50,14,14,0,0.619,
+source,SwissWatch,pooled out-of-fold (3 seeds stacked),efficientnet_b0,14,14,0,0.5952,
+source,SwissWatch,pooled out-of-fold (3 seeds stacked),mobilenet_v2,14,14,0,0.5238,
+source,The Leo Time Site,pooled out-of-fold (3 seeds stacked),resnet50,9,9,0,0.3704,
+source,The Leo Time Site,pooled out-of-fold (3 seeds stacked),efficientnet_b0,9,9,0,0.7407,
+source,The Leo Time Site,pooled out-of-fold (3 seeds stacked),mobilenet_v2,9,9,0,0.5556,
+source,VSF,pooled out-of-fold (3 seeds stacked),resnet50,13,13,0,0.4103,
+source,VSF,pooled out-of-fold (3 seeds stacked),efficientnet_b0,13,13,0,0.2821,
+source,VSF,pooled out-of-fold (3 seeds stacked),mobilenet_v2,13,13,0,0.3077,
+source,WSONGTIME,pooled out-of-fold (3 seeds stacked),resnet50,25,25,0,0.7333,
+source,WSONGTIME,pooled out-of-fold (3 seeds stacked),efficientnet_b0,25,25,0,0.3333,
+source,WSONGTIME,pooled out-of-fold (3 seeds stacked),mobilenet_v2,25,25,0,0.44,
+label_tier,1.0,pooled out-of-fold (3 seeds stacked),resnet50,116,0,116,,0.1897
+label_tier,1.0,pooled out-of-fold (3 seeds stacked),efficientnet_b0,116,0,116,,0.4655
+label_tier,1.0,pooled out-of-fold (3 seeds stacked),mobilenet_v2,116,0,116,,0.3506
+label_tier,2.0,pooled out-of-fold (3 seeds stacked),resnet50,396,220,176,0.5015,0.3826
+label_tier,2.0,pooled out-of-fold (3 seeds stacked),efficientnet_b0,396,220,176,0.4227,0.5436
+label_tier,2.0,pooled out-of-fold (3 seeds stacked),mobilenet_v2,396,220,176,0.5045,0.4034
+brand,Breitling,external test (15 models stacked),resnet50,50,25,25,0.3067,0.5547
+brand,Breitling,external test (15 models stacked),efficientnet_b0,50,25,25,0.28,0.5867
+brand,Breitling,external test (15 models stacked),mobilenet_v2,50,25,25,0.3333,0.4427
+brand,Omega,external test (15 models stacked),resnet50,41,16,25,0.6625,0.2373
+brand,Omega,external test (15 models stacked),efficientnet_b0,41,16,25,0.2833,0.4
+brand,Omega,external test (15 models stacked),mobilenet_v2,41,16,25,0.6208,0.2933
+brand,Rolex,external test (15 models stacked),resnet50,40,16,24,0.1292,0.1556
+brand,Rolex,external test (15 models stacked),efficientnet_b0,40,16,24,0.1375,0.3611
+brand,Rolex,external test (15 models stacked),mobilenet_v2,40,16,24,0.1917,0.2417
+brand,Seiko,external test (15 models stacked),resnet50,49,24,25,0.3139,0.4667
+brand,Seiko,external test (15 models stacked),efficientnet_b0,49,24,25,0.2083,0.5253
+brand,Seiko,external test (15 models stacked),mobilenet_v2,49,24,25,0.2333,0.3893
+tier,Plain,external test (15 models stacked),resnet50,68,29,39,0.6989,0.106
+tier,Plain,external test (15 models stacked),efficientnet_b0,68,29,39,0.469,0.3214
+tier,Plain,external test (15 models stacked),mobilenet_v2,68,29,39,0.6,0.2598
+tier,Uncontrolled,external test (15 models stacked),resnet50,112,52,60,0.1462,0.5178
+tier,Uncontrolled,external test (15 models stacked),efficientnet_b0,112,52,60,0.0987,0.5656
+tier,Uncontrolled,external test (15 models stacked),mobilenet_v2,112,52,60,0.1833,0.3967
+source,Brand website,external test (15 models stacked),resnet50,39,0,39,,0.106
+source,Brand website,external test (15 models stacked),efficientnet_b0,39,0,39,,0.3214
+source,Brand website,external test (15 models stacked),mobilenet_v2,39,0,39,,0.2598
+source,Community Forums,external test (15 models stacked),resnet50,6,6,0,0.2889,
+source,Community Forums,external test (15 models stacked),efficientnet_b0,6,6,0,0.1222,
+source,Community Forums,external test (15 models stacked),mobilenet_v2,6,6,0,0.3111,
+source,EricTime,external test (15 models stacked),resnet50,19,19,0,0.1614,
+source,EricTime,external test (15 models stacked),efficientnet_b0,19,19,0,0.0737,
+source,EricTime,external test (15 models stacked),mobilenet_v2,19,19,0,0.2175,
+source,LuxuryWatch,external test (15 models stacked),resnet50,14,14,0,0.2429,
+source,LuxuryWatch,external test (15 models stacked),efficientnet_b0,14,14,0,0.3286,
+source,LuxuryWatch,external test (15 models stacked),mobilenet_v2,14,14,0,0.2857,
+source,ORFactory,external test (15 models stacked),resnet50,15,15,0,0.7689,
+source,ORFactory,external test (15 models stacked),efficientnet_b0,15,15,0,0.4444,
+source,ORFactory,external test (15 models stacked),mobilenet_v2,15,15,0,0.7378,
+source,Paterson Jewellers,external test (15 models stacked),resnet50,7,7,0,0.7429,
+source,Paterson Jewellers,external test (15 models stacked),efficientnet_b0,7,7,0,0.4476,
+source,Paterson Jewellers,external test (15 models stacked),mobilenet_v2,7,7,0,0.4571,
+source,WSONGTIME,external test (15 models stacked),resnet50,3,3,0,0.2,
+source,WSONGTIME,external test (15 models stacked),efficientnet_b0,3,3,0,0.1111,
+source,WSONGTIME,external test (15 models stacked),mobilenet_v2,3,3,0,0.0889,
+source,WatchuSeek Forums,external test (15 models stacked),resnet50,17,17,0,0.1373,
+source,WatchuSeek Forums,external test (15 models stacked),efficientnet_b0,17,17,0,0.1098,
+source,WatchuSeek Forums,external test (15 models stacked),mobilenet_v2,17,17,0,0.1412,
+source,eBay Authenticity Guarantee,external test (15 models stacked),resnet50,60,0,60,,0.5178
+source,eBay Authenticity Guarantee,external test (15 models stacked),efficientnet_b0,60,0,60,,0.5656
+source,eBay Authenticity Guarantee,external test (15 models stacked),mobilenet_v2,60,0,60,,0.3967
+label_tier,1.0,external test (15 models stacked),resnet50,39,0,39,,0.106
+label_tier,1.0,external test (15 models stacked),efficientnet_b0,39,0,39,,0.3214
+label_tier,1.0,external test (15 models stacked),mobilenet_v2,39,0,39,,0.2598
+label_tier,2.0,external test (15 models stacked),resnet50,126,66,60,0.3283,0.5178
+label_tier,2.0,external test (15 models stacked),efficientnet_b0,126,66,60,0.1838,0.5656
+label_tier,2.0,external test (15 models stacked),mobilenet_v2,126,66,60,0.3172,0.3967
+brand,Breitling,external test (final model),resnet50,50,25,25,0.4,0.56
+brand,Breitling,external test (final model),efficientnet_b0,50,25,25,0.32,0.44
+brand,Breitling,external test (final model),mobilenet_v2,50,25,25,0.28,0.32
+brand,Omega,external test (final model),resnet50,41,16,25,0.625,0.2
+brand,Omega,external test (final model),efficientnet_b0,41,16,25,0.1875,0.36
+brand,Omega,external test (final model),mobilenet_v2,41,16,25,0.5625,0.28
+brand,Rolex,external test (final model),resnet50,40,16,24,0.1875,0.25
+brand,Rolex,external test (final model),efficientnet_b0,40,16,24,0.0625,0.1667
+brand,Rolex,external test (final model),mobilenet_v2,40,16,24,0.125,0.1667
+brand,Seiko,external test (final model),resnet50,49,24,25,0.2917,0.56
+brand,Seiko,external test (final model),efficientnet_b0,49,24,25,0.1667,0.52
+brand,Seiko,external test (final model),mobilenet_v2,49,24,25,0.0833,0.44
+tier,Plain,external test (final model),resnet50,68,29,39,0.8276,0.0513
+tier,Plain,external test (final model),efficientnet_b0,68,29,39,0.5172,0.1538
+tier,Plain,external test (final model),mobilenet_v2,68,29,39,0.5517,0.1282
+tier,Uncontrolled,external test (final model),resnet50,112,52,60,0.1154,0.6167
+tier,Uncontrolled,external test (final model),efficientnet_b0,112,52,60,0.0192,0.5167
+tier,Uncontrolled,external test (final model),mobilenet_v2,112,52,60,0.0769,0.4167
+source,Brand website,external test (final model),resnet50,39,0,39,,0.0513
+source,Brand website,external test (final model),efficientnet_b0,39,0,39,,0.1538
+source,Brand website,external test (final model),mobilenet_v2,39,0,39,,0.1282
+source,Community Forums,external test (final model),resnet50,6,6,0,0.1667,
+source,Community Forums,external test (final model),efficientnet_b0,6,6,0,0.0,
+source,Community Forums,external test (final model),mobilenet_v2,6,6,0,0.3333,
+source,EricTime,external test (final model),resnet50,19,19,0,0.2632,
+source,EricTime,external test (final model),efficientnet_b0,19,19,0,0.0,
+source,EricTime,external test (final model),mobilenet_v2,19,19,0,0.0526,
+source,LuxuryWatch,external test (final model),resnet50,14,14,0,0.3571,
+source,LuxuryWatch,external test (final model),efficientnet_b0,14,14,0,0.3571,
+source,LuxuryWatch,external test (final model),mobilenet_v2,14,14,0,0.2857,
+source,ORFactory,external test (final model),resnet50,15,15,0,0.8,
+source,ORFactory,external test (final model),efficientnet_b0,15,15,0,0.4667,
+source,ORFactory,external test (final model),mobilenet_v2,15,15,0,0.7333,
+source,Paterson Jewellers,external test (final model),resnet50,7,7,0,0.8571,
+source,Paterson Jewellers,external test (final model),efficientnet_b0,7,7,0,0.5714,
+source,Paterson Jewellers,external test (final model),mobilenet_v2,7,7,0,0.2857,
+source,WSONGTIME,external test (final model),resnet50,3,3,0,0.0,
+source,WSONGTIME,external test (final model),efficientnet_b0,3,3,0,0.0,
+source,WSONGTIME,external test (final model),mobilenet_v2,3,3,0,0.0,
+source,WatchuSeek Forums,external test (final model),resnet50,17,17,0,0.0588,
+source,WatchuSeek Forums,external test (final model),efficientnet_b0,17,17,0,0.0,
+source,WatchuSeek Forums,external test (final model),mobilenet_v2,17,17,0,0.0,
+source,eBay Authenticity Guarantee,external test (final model),resnet50,60,0,60,,0.6167
+source,eBay Authenticity Guarantee,external test (final model),efficientnet_b0,60,0,60,,0.5167
+source,eBay Authenticity Guarantee,external test (final model),mobilenet_v2,60,0,60,,0.4167
+label_tier,1.0,external test (final model),resnet50,39,0,39,,0.0513
+label_tier,1.0,external test (final model),efficientnet_b0,39,0,39,,0.1538
+label_tier,1.0,external test (final model),mobilenet_v2,39,0,39,,0.1282
+label_tier,2.0,external test (final model),resnet50,126,66,60,0.3333,0.6167
+label_tier,2.0,external test (final model),efficientnet_b0,126,66,60,0.1212,0.5167
+label_tier,2.0,external test (final model),mobilenet_v2,126,66,60,0.2121,0.4167

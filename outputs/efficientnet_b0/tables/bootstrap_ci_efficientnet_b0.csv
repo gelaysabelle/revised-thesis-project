@@ -1,0 +1,10 @@
+arch,evaluated_on,metric,estimate,ci_low,ci_high
+efficientnet_b0,pooled out-of-fold (3 seeds stacked),accuracy,0.5405405405405406,0.43929534709875545,0.6121109250992064
+efficientnet_b0,pooled out-of-fold (3 seeds stacked),f1,0.5528930450029222,0.3933660086895886,0.665932433305342
+efficientnet_b0,pooled out-of-fold (3 seeds stacked),roc_auc,0.645181172630519,0.553968265546153,0.7459578816835628
+efficientnet_b0,external test (15 models stacked),accuracy,0.6377777777777778,0.5030155210643016,0.730846523668639
+efficientnet_b0,external test (15 models stacked),f1,0.6563598032326071,0.24721038941455875,0.7980687060173088
+efficientnet_b0,external test (15 models stacked),roc_auc,0.7630693768965375,0.6610663606590947,0.8810190173283272
+efficientnet_b0,external test (packaged final model),accuracy,0.7055555555555556,0.566253170577045,0.82554579093432
+efficientnet_b0,external test (packaged final model),f1,0.7103825136612022,0.3111111111111111,0.8620768744068332
+efficientnet_b0,external test (packaged final model),roc_auc,0.8225464521760818,0.7203366994702654,0.9387302272012812

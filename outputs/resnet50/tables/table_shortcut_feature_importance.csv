@@ -1,0 +1,70 @@
+baseline,feature,importance
+B1 file size + re-encode ratio,reencode_ratio,0.5377442623418313
+B1 file size + re-encode ratio,file_size,0.4622557376581688
+B1p file size of the PROCESSED image (what the CNN sees),p_file_size,1.0
+"B2 resolution, blur, brightness, colour histogram, JPEG quality",orig_w,0.1581530162217058
+"B2 resolution, blur, brightness, colour histogram, JPEG quality",short_side,0.15787531306418762
+"B2 resolution, blur, brightness, colour histogram, JPEG quality",orig_h,0.12998965296871906
+"B2 resolution, blur, brightness, colour histogram, JPEG quality",jpeg_quality,0.06809100293589562
+"B2 resolution, blur, brightness, colour histogram, JPEG quality",is_jpeg,0.03650783711685378
+"B2 resolution, blur, brightness, colour histogram, JPEG quality",brightness,0.035254451996366905
+"B2 resolution, blur, brightness, colour histogram, JPEG quality",hist_10,0.02727289696717125
+"B2 resolution, blur, brightness, colour histogram, JPEG quality",aspect,0.025588400603930823
+"B2 resolution, blur, brightness, colour histogram, JPEG quality",hist_23,0.024162891433289906
+"B2 resolution, blur, brightness, colour histogram, JPEG quality",hist_18,0.022657683061598526
+"B2 resolution, blur, brightness, colour histogram, JPEG quality",hist_7,0.021459060568671095
+"B2 resolution, blur, brightness, colour histogram, JPEG quality",hist_2,0.020679600425225503
+"B2 resolution, blur, brightness, colour histogram, JPEG quality",hist_19,0.020644853091739128
+"B2 resolution, blur, brightness, colour histogram, JPEG quality",hist_8,0.020524743275357662
+"B2 resolution, blur, brightness, colour histogram, JPEG quality",hist_11,0.0200348643788184
+"B2 resolution, blur, brightness, colour histogram, JPEG quality",hist_15,0.01987961492294233
+"B2 resolution, blur, brightness, colour histogram, JPEG quality",hist_3,0.018307837618224368
+"B2 resolution, blur, brightness, colour histogram, JPEG quality",hist_0,0.016550161291358424
+"B2 resolution, blur, brightness, colour histogram, JPEG quality",hist_21,0.01617649381792078
+"B2 resolution, blur, brightness, colour histogram, JPEG quality",hist_16,0.015094748118702822
+"B2 resolution, blur, brightness, colour histogram, JPEG quality",hist_9,0.012637564364411286
+"B2 resolution, blur, brightness, colour histogram, JPEG quality",hist_6,0.012024046194745213
+"B2 resolution, blur, brightness, colour histogram, JPEG quality",hist_17,0.01186509084441302
+"B2 resolution, blur, brightness, colour histogram, JPEG quality",hist_22,0.011045676094846116
+"B2 resolution, blur, brightness, colour histogram, JPEG quality",hist_20,0.010878331298052518
+"B2 resolution, blur, brightness, colour histogram, JPEG quality",hist_14,0.010771976957267509
+"B2 resolution, blur, brightness, colour histogram, JPEG quality",hist_13,0.010492549748530786
+"B2 resolution, blur, brightness, colour histogram, JPEG quality",hist_1,0.009605777801657478
+"B2 resolution, blur, brightness, colour histogram, JPEG quality",hist_5,0.009415875767424841
+"B2 resolution, blur, brightness, colour histogram, JPEG quality",lap_var,0.009276215733857453
+"B2 resolution, blur, brightness, colour histogram, JPEG quality",hist_12,0.008565173156688677
+"B2 resolution, blur, brightness, colour histogram, JPEG quality",hist_4,0.008516598159425296
+"B2p PROCESSED image: size, sharpness, brightness, contrast, white share, edges, colour histogram",p_lap_var,0.07899908827880464
+"B2p PROCESSED image: size, sharpness, brightness, contrast, white share, edges, colour histogram",p_white_frac,0.05415614555179441
+"B2p PROCESSED image: size, sharpness, brightness, contrast, white share, edges, colour histogram",phist_23,0.045600590118925054
+"B2p PROCESSED image: size, sharpness, brightness, contrast, white share, edges, colour histogram",phist_15,0.04024922701705014
+"B2p PROCESSED image: size, sharpness, brightness, contrast, white share, edges, colour histogram",phist_18,0.035320330426677995
+"B2p PROCESSED image: size, sharpness, brightness, contrast, white share, edges, colour histogram",phist_14,0.0352721285788121
+"B2p PROCESSED image: size, sharpness, brightness, contrast, white share, edges, colour histogram",p_file_size,0.03526671395943622
+"B2p PROCESSED image: size, sharpness, brightness, contrast, white share, edges, colour histogram",phist_7,0.034868100274007725
+"B2p PROCESSED image: size, sharpness, brightness, contrast, white share, edges, colour histogram",phist_22,0.034014652032594635
+"B2p PROCESSED image: size, sharpness, brightness, contrast, white share, edges, colour histogram",phist_10,0.03316035057134063
+"B2p PROCESSED image: size, sharpness, brightness, contrast, white share, edges, colour histogram",phist_6,0.032730307732166015
+"B2p PROCESSED image: size, sharpness, brightness, contrast, white share, edges, colour histogram",phist_17,0.031850216138099685
+"B2p PROCESSED image: size, sharpness, brightness, contrast, white share, edges, colour histogram",p_edge_density,0.03142930835791336
+"B2p PROCESSED image: size, sharpness, brightness, contrast, white share, edges, colour histogram",phist_16,0.030960234897750953
+"B2p PROCESSED image: size, sharpness, brightness, contrast, white share, edges, colour histogram",phist_8,0.030846395241411317
+"B2p PROCESSED image: size, sharpness, brightness, contrast, white share, edges, colour histogram",phist_0,0.02984016302247521
+"B2p PROCESSED image: size, sharpness, brightness, contrast, white share, edges, colour histogram",phist_4,0.02962040753964009
+"B2p PROCESSED image: size, sharpness, brightness, contrast, white share, edges, colour histogram",phist_5,0.029199621834589285
+"B2p PROCESSED image: size, sharpness, brightness, contrast, white share, edges, colour histogram",phist_19,0.029159269079586242
+"B2p PROCESSED image: size, sharpness, brightness, contrast, white share, edges, colour histogram",phist_3,0.028737306374270938
+"B2p PROCESSED image: size, sharpness, brightness, contrast, white share, edges, colour histogram",phist_2,0.02790223599737633
+"B2p PROCESSED image: size, sharpness, brightness, contrast, white share, edges, colour histogram",phist_1,0.027858150331092478
+"B2p PROCESSED image: size, sharpness, brightness, contrast, white share, edges, colour histogram",phist_13,0.027772557102594853
+"B2p PROCESSED image: size, sharpness, brightness, contrast, white share, edges, colour histogram",p_brightness,0.02771868376000216
+"B2p PROCESSED image: size, sharpness, brightness, contrast, white share, edges, colour histogram",phist_12,0.027585962395976615
+"B2p PROCESSED image: size, sharpness, brightness, contrast, white share, edges, colour histogram",phist_21,0.02680619168202092
+"B2p PROCESSED image: size, sharpness, brightness, contrast, white share, edges, colour histogram",phist_9,0.026439312807615946
+"B2p PROCESSED image: size, sharpness, brightness, contrast, white share, edges, colour histogram",phist_11,0.026358620770981174
+"B2p PROCESSED image: size, sharpness, brightness, contrast, white share, edges, colour histogram",phist_20,0.02569349325865914
+"B2p PROCESSED image: size, sharpness, brightness, contrast, white share, edges, colour histogram",p_contrast,0.024584234866333644
+B3 mask area + shape,mask_area_frac,0.33589867930565986
+B3 mask area + shape,mask_bbox_aspect,0.24657687411479143
+B3 mask area + shape,mask_extent,0.2451346159747177
+B3 mask area + shape,mask_solidity,0.17238983060483096

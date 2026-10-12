@@ -1,0 +1,10 @@
+arch,evaluated_on,metric,estimate,ci_low,ci_high
+mobilenet_v2,pooled out-of-fold (3 seeds stacked),accuracy,0.5783783783783784,0.5212870071432183,0.6450272872482029
+mobilenet_v2,pooled out-of-fold (3 seeds stacked),f1,0.5459249676584734,0.41108837925497005,0.6753753422827756
+mobilenet_v2,pooled out-of-fold (3 seeds stacked),roc_auc,0.6698786395124747,0.5901419829222444,0.7457702468617563
+mobilenet_v2,external test (15 models stacked),accuracy,0.6618518518518518,0.5980666539387207,0.7447061214729794
+mobilenet_v2,external test (15 models stacked),f1,0.6398422090729783,0.2784144740433038,0.7786776589049715
+mobilenet_v2,external test (15 models stacked),roc_auc,0.757699630045309,0.6389167075640143,0.8952056184091068
+mobilenet_v2,external test (packaged final model),accuracy,0.7222222222222222,0.6172628107559615,0.8273636314828732
+mobilenet_v2,external test (packaged final model),f1,0.7093023255813954,0.2926829268292683,0.8601064126135161
+mobilenet_v2,external test (packaged final model),roc_auc,0.7981668537224093,0.6774080352751037,0.9349834237492466

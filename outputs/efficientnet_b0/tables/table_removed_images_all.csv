@@ -1,0 +1,125 @@
+image_id,tracker_image_id,filename,split,cls,brand,stage,detail
+pool/counterfeit/CF-OME-0161.jpg,CF-OME-0161,CF-OME-0161.jpg,pool,counterfeit,Omega,low_resolution,short side 150 px (minimum 400)
+pool/counterfeit/CF-OME-0162.jpg,CF-OME-0162,CF-OME-0162.jpg,pool,counterfeit,Omega,low_resolution,short side 150 px (minimum 400)
+pool/counterfeit/CF-OME-0163.jpg,CF-OME-0163,CF-OME-0163.jpg,pool,counterfeit,Omega,low_resolution,short side 150 px (minimum 400)
+pool/counterfeit/CF-OME-0164.jpg,CF-OME-0164,CF-OME-0164.jpg,pool,counterfeit,Omega,low_resolution,short side 150 px (minimum 400)
+pool/counterfeit/CF-OME-0165.jpg,CF-OME-0165,CF-OME-0165.jpg,pool,counterfeit,Omega,low_resolution,short side 150 px (minimum 400)
+pool/counterfeit/CF-OME-0166.jpg,CF-OME-0166,CF-OME-0166.jpg,pool,counterfeit,Omega,low_resolution,short side 150 px (minimum 400)
+pool/counterfeit/CF-OME-0167.jpg,CF-OME-0167,CF-OME-0167.jpg,pool,counterfeit,Omega,low_resolution,short side 150 px (minimum 400)
+pool/counterfeit/CF-OME-0168.jpg,CF-OME-0168,CF-OME-0168.jpg,pool,counterfeit,Omega,low_resolution,short side 150 px (minimum 400)
+pool/counterfeit/CF-OME-0169.jpg,CF-OME-0169,CF-OME-0169.jpg,pool,counterfeit,Omega,low_resolution,short side 150 px (minimum 400)
+pool/counterfeit/CF-OME-0170.jpg,CF-OME-0170,CF-OME-0170.jpg,pool,counterfeit,Omega,low_resolution,short side 150 px (minimum 400)
+pool/counterfeit/CF-OME-0231.webp,CF-OME-0231,CF-OME-0231.webp,pool,counterfeit,Omega,low_resolution,short side 239 px (minimum 400)
+pool/counterfeit/CF-ROL-0001.jpg,CF-ROL-0001,CF-ROL-0001.jpg,pool,counterfeit,Rolex,low_resolution,short side 213 px (minimum 400)
+pool/counterfeit/CF-ROL-0006.jpg,CF-ROL-0006,CF-ROL-0006.jpg,pool,counterfeit,Rolex,low_resolution,short side 213 px (minimum 400)
+pool/counterfeit/CF-ROL-0016.jpg,CF-ROL-0016,CF-ROL-0016.jpg,pool,counterfeit,Rolex,low_resolution,short side 366 px (minimum 400)
+pool/counterfeit/CF-ROL-0017.jpg,CF-ROL-0017,CF-ROL-0017.jpg,pool,counterfeit,Rolex,low_resolution,short side 363 px (minimum 400)
+pool/counterfeit/CF-ROL-0018.jpg,CF-ROL-0018,CF-ROL-0018.jpg,pool,counterfeit,Rolex,low_resolution,short side 365 px (minimum 400)
+pool/counterfeit/CF-ROL-0019.jpg,CF-ROL-0019,CF-ROL-0019.jpg,pool,counterfeit,Rolex,low_resolution,short side 360 px (minimum 400)
+pool/counterfeit/CF-ROL-0020.jpg,CF-ROL-0020,CF-ROL-0020.jpg,pool,counterfeit,Rolex,low_resolution,short side 375 px (minimum 400)
+pool/counterfeit/CF-ROL-0021.jpg,CF-ROL-0021,CF-ROL-0021.jpg,pool,counterfeit,Rolex,low_resolution,short side 371 px (minimum 400)
+pool/counterfeit/CF-ROL-0022.jpg,CF-ROL-0022,CF-ROL-0022.jpg,pool,counterfeit,Rolex,low_resolution,short side 370 px (minimum 400)
+pool/counterfeit/CF-ROL-0023.jpg,CF-ROL-0023,CF-ROL-0023.jpg,pool,counterfeit,Rolex,low_resolution,short side 373 px (minimum 400)
+pool/counterfeit/CF-ROL-0024.jpg,CF-ROL-0024,CF-ROL-0024.jpg,pool,counterfeit,Rolex,low_resolution,short side 373 px (minimum 400)
+pool/counterfeit/CF-ROL-0025.jpg,CF-ROL-0025,CF-ROL-0025.jpg,pool,counterfeit,Rolex,low_resolution,short side 377 px (minimum 400)
+pool/counterfeit/CF-ROL-0030.jpg,CF-ROL-0030,CF-ROL-0030.jpg,pool,counterfeit,Rolex,low_resolution,short side 150 px (minimum 400)
+pool/counterfeit/CF-ROL-0049.jpg,CF-ROL-0049,CF-ROL-0049.jpg,pool,counterfeit,Rolex,low_resolution,short side 330 px (minimum 400)
+pool/counterfeit/CF-ROL-0054.png,CF-ROL-0054,CF-ROL-0054.png,pool,counterfeit,Rolex,low_resolution,short side 367 px (minimum 400)
+pool/counterfeit/CF-ROL-0056.png,CF-ROL-0056,CF-ROL-0056.png,pool,counterfeit,Rolex,low_resolution,short side 372 px (minimum 400)
+pool/counterfeit/CF-ROL-0060.png,CF-ROL-0060,CF-ROL-0060.png,pool,counterfeit,Rolex,low_resolution,short side 275 px (minimum 400)
+pool/counterfeit/CF-ROL-0062.png,CF-ROL-0062,CF-ROL-0062.png,pool,counterfeit,Rolex,low_resolution,short side 372 px (minimum 400)
+test/counterfeit/CF-BRE-0377.jpg,CF-BRE-0377,CF-BRE-0377.jpg,test,counterfeit,Breitling,low_resolution,short side 365 px (minimum 400)
+test/counterfeit/CF-BRE-0381.png,CF-BRE-0381,CF-BRE-0381.png,test,counterfeit,Breitling,low_resolution,short side 333 px (minimum 400)
+test/counterfeit/CF-OME-0211.png,CF-OME-0211,CF-OME-0211.png,test,counterfeit,Omega,low_resolution,short side 395 px (minimum 400)
+test/counterfeit/CF-OME-0212.png,CF-OME-0212,CF-OME-0212.png,test,counterfeit,Omega,low_resolution,short side 395 px (minimum 400)
+test/counterfeit/CF-OME-0215.png,CF-OME-0215,CF-OME-0215.png,test,counterfeit,Omega,low_resolution,short side 392 px (minimum 400)
+test/counterfeit/CF-OME-0216.png,CF-OME-0216,CF-OME-0216.png,test,counterfeit,Omega,low_resolution,short side 335 px (minimum 400)
+test/counterfeit/CF-OME-0233.webp,CF-OME-0233,CF-OME-0233.webp,test,counterfeit,Omega,low_resolution,short side 320 px (minimum 400)
+test/counterfeit/CF-OME-0234.webp,CF-OME-0234,CF-OME-0234.webp,test,counterfeit,Omega,low_resolution,short side 240 px (minimum 400)
+test/counterfeit/CF-OME-0235.webp,CF-OME-0235,CF-OME-0235.webp,test,counterfeit,Omega,low_resolution,short side 240 px (minimum 400)
+test/counterfeit/CF-ROL-0083.png,CF-ROL-0083,CF-ROL-0083.png,test,counterfeit,Rolex,low_resolution,short side 383 px (minimum 400)
+test/counterfeit/CF-ROL-0084.png,CF-ROL-0084,CF-ROL-0084.png,test,counterfeit,Rolex,low_resolution,short side 365 px (minimum 400)
+test/counterfeit/CF-ROL-0085.png,CF-ROL-0085,CF-ROL-0085.png,test,counterfeit,Rolex,low_resolution,short side 389 px (minimum 400)
+test/counterfeit/CF-ROL-0086.png,CF-ROL-0086,CF-ROL-0086.png,test,counterfeit,Rolex,low_resolution,short side 384 px (minimum 400)
+test/counterfeit/CF-ROL-0088.png,CF-ROL-0088,CF-ROL-0088.png,test,counterfeit,Rolex,low_resolution,short side 363 px (minimum 400)
+pool/authentic/AU-BRE-0327.jpg,AU-BRE-0327,AU-BRE-0327.jpg,pool,authentic,Breitling,small_crop,cropped watch 314 px on the short side (minimum 320)
+pool/authentic/AU-BRE-0340.jpg,AU-BRE-0340,AU-BRE-0340.jpg,pool,authentic,Breitling,small_crop,cropped watch 301 px on the short side (minimum 320)
+pool/authentic/AU-OME-0141.jpg,AU-OME-0141,AU-OME-0141.jpg,pool,authentic,Omega,small_crop,cropped watch 313 px on the short side (minimum 320)
+pool/authentic/AU-ROL-0023.jpg,AU-ROL-0023,AU-ROL-0023.jpg,pool,authentic,Rolex,small_crop,cropped watch 279 px on the short side (minimum 320)
+pool/authentic/AU-ROL-0049.jpg,AU-ROL-0049,AU-ROL-0049.jpg,pool,authentic,Rolex,small_crop,cropped watch 265 px on the short side (minimum 320)
+pool/authentic/AU-ROL-0065.jpg,AU-ROL-0065,AU-ROL-0065.jpg,pool,authentic,Rolex,small_crop,cropped watch 290 px on the short side (minimum 320)
+pool/authentic/AU-ROL-0067.jpg,AU-ROL-0067,AU-ROL-0067.jpg,pool,authentic,Rolex,small_crop,cropped watch 307 px on the short side (minimum 320)
+pool/authentic/AU-ROL-0075.jpg,AU-ROL-0075,AU-ROL-0075.jpg,pool,authentic,Rolex,small_crop,cropped watch 291 px on the short side (minimum 320)
+pool/counterfeit/CF-OME-0122.jpg,CF-OME-0122,CF-OME-0122.jpg,pool,counterfeit,Omega,small_crop,cropped watch 307 px on the short side (minimum 320)
+pool/counterfeit/CF-OME-0125.jpg,CF-OME-0125,CF-OME-0125.jpg,pool,counterfeit,Omega,small_crop,cropped watch 307 px on the short side (minimum 320)
+pool/counterfeit/CF-OME-0131.webp,CF-OME-0131,CF-OME-0131.webp,pool,counterfeit,Omega,small_crop,cropped watch 258 px on the short side (minimum 320)
+pool/counterfeit/CF-OME-0132.webp,CF-OME-0132,CF-OME-0132.webp,pool,counterfeit,Omega,small_crop,cropped watch 264 px on the short side (minimum 320)
+pool/counterfeit/CF-OME-0172.jpg,CF-OME-0172,CF-OME-0172.jpg,pool,counterfeit,Omega,small_crop,cropped watch 310 px on the short side (minimum 320)
+pool/counterfeit/CF-OME-0177.jpg,CF-OME-0177,CF-OME-0177.jpg,pool,counterfeit,Omega,small_crop,cropped watch 300 px on the short side (minimum 320)
+pool/counterfeit/CF-OME-0201.jpg,CF-OME-0201,CF-OME-0201.jpg,pool,counterfeit,Omega,small_crop,cropped watch 319 px on the short side (minimum 320)
+pool/counterfeit/CF-ROL-0002.jpg,CF-ROL-0002,CF-ROL-0002.jpg,pool,counterfeit,Rolex,small_crop,cropped watch 258 px on the short side (minimum 320)
+pool/counterfeit/CF-ROL-0003.jpg,CF-ROL-0003,CF-ROL-0003.jpg,pool,counterfeit,Rolex,small_crop,cropped watch 251 px on the short side (minimum 320)
+pool/counterfeit/CF-ROL-0004.jpg,CF-ROL-0004,CF-ROL-0004.jpg,pool,counterfeit,Rolex,small_crop,cropped watch 253 px on the short side (minimum 320)
+pool/counterfeit/CF-ROL-0005.jpg,CF-ROL-0005,CF-ROL-0005.jpg,pool,counterfeit,Rolex,small_crop,cropped watch 244 px on the short side (minimum 320)
+pool/counterfeit/CF-ROL-0007.jpg,CF-ROL-0007,CF-ROL-0007.jpg,pool,counterfeit,Rolex,small_crop,cropped watch 213 px on the short side (minimum 320)
+pool/counterfeit/CF-ROL-0008.jpg,CF-ROL-0008,CF-ROL-0008.jpg,pool,counterfeit,Rolex,small_crop,cropped watch 221 px on the short side (minimum 320)
+pool/counterfeit/CF-ROL-0009.jpg,CF-ROL-0009,CF-ROL-0009.jpg,pool,counterfeit,Rolex,small_crop,cropped watch 216 px on the short side (minimum 320)
+pool/counterfeit/CF-ROL-0032.webp,CF-ROL-0032,CF-ROL-0032.webp,pool,counterfeit,Rolex,small_crop,cropped watch 201 px on the short side (minimum 320)
+pool/counterfeit/CF-ROL-0033.webp,CF-ROL-0033,CF-ROL-0033.webp,pool,counterfeit,Rolex,small_crop,cropped watch 253 px on the short side (minimum 320)
+pool/counterfeit/CF-ROL-0036.webp,CF-ROL-0036,CF-ROL-0036.webp,pool,counterfeit,Rolex,small_crop,cropped watch 288 px on the short side (minimum 320)
+pool/counterfeit/CF-ROL-0041.webp,CF-ROL-0041,CF-ROL-0041.webp,pool,counterfeit,Rolex,small_crop,cropped watch 279 px on the short side (minimum 320)
+pool/counterfeit/CF-ROL-0044.jpg,CF-ROL-0044,CF-ROL-0044.jpg,pool,counterfeit,Rolex,small_crop,cropped watch 282 px on the short side (minimum 320)
+pool/counterfeit/CF-ROL-0058.png,CF-ROL-0058,CF-ROL-0058.png,pool,counterfeit,Rolex,small_crop,cropped watch 309 px on the short side (minimum 320)
+pool/counterfeit/CF-ROL-0059.png,CF-ROL-0059,CF-ROL-0059.png,pool,counterfeit,Rolex,small_crop,cropped watch 289 px on the short side (minimum 320)
+pool/counterfeit/CF-ROL-0061.png,CF-ROL-0061,CF-ROL-0061.png,pool,counterfeit,Rolex,small_crop,cropped watch 211 px on the short side (minimum 320)
+pool/counterfeit/CF-ROL-0069.jpg,CF-ROL-0069,CF-ROL-0069.jpg,pool,counterfeit,Rolex,small_crop,cropped watch 282 px on the short side (minimum 320)
+pool/counterfeit/CF-ROL-0071.jpg,CF-ROL-0071,CF-ROL-0071.jpg,pool,counterfeit,Rolex,small_crop,cropped watch 275 px on the short side (minimum 320)
+pool/counterfeit/CF-ROL-0074.jpg,CF-ROL-0074,CF-ROL-0074.jpg,pool,counterfeit,Rolex,small_crop,cropped watch 278 px on the short side (minimum 320)
+pool/counterfeit/CF-ROL-0076.jpg,CF-ROL-0076,CF-ROL-0076.jpg,pool,counterfeit,Rolex,small_crop,cropped watch 302 px on the short side (minimum 320)
+pool/counterfeit/CF-SEI-0325.jpg,CF-SEI-0325,CF-SEI-0325.jpg,pool,counterfeit,Seiko,small_crop,cropped watch 312 px on the short side (minimum 320)
+test/authentic/AU-ROL-0081.jpg,AU-ROL-0081,AU-ROL-0081.jpg,test,authentic,Rolex,small_crop,cropped watch 305 px on the short side (minimum 320)
+test/counterfeit/CF-BRE-0415.jpg,CF-BRE-0415,CF-BRE-0415.jpg,test,counterfeit,Breitling,small_crop,cropped watch 291 px on the short side (minimum 320)
+test/counterfeit/CF-BRE-0419.jpg,CF-BRE-0419,CF-BRE-0419.jpg,test,counterfeit,Breitling,small_crop,cropped watch 302 px on the short side (minimum 320)
+test/counterfeit/CF-BRE-0420.jpg,CF-BRE-0420,CF-BRE-0420.jpg,test,counterfeit,Breitling,small_crop,cropped watch 318 px on the short side (minimum 320)
+test/counterfeit/CF-BRE-0455.jpg,CF-BRE-0455,CF-BRE-0455.jpg,test,counterfeit,Breitling,small_crop,cropped watch 276 px on the short side (minimum 320)
+test/counterfeit/CF-OME-0209.png,CF-OME-0209,CF-OME-0209.png,test,counterfeit,Omega,small_crop,cropped watch 307 px on the short side (minimum 320)
+test/counterfeit/CF-OME-0214.png,CF-OME-0214,CF-OME-0214.png,test,counterfeit,Omega,small_crop,cropped watch 315 px on the short side (minimum 320)
+test/counterfeit/CF-ROL-0087.png,CF-ROL-0087,CF-ROL-0087.png,test,counterfeit,Rolex,small_crop,cropped watch 314 px on the short side (minimum 320)
+test/counterfeit/CF-ROL-0090.png,CF-ROL-0090,CF-ROL-0090.png,test,counterfeit,Rolex,small_crop,cropped watch 302 px on the short side (minimum 320)
+test/counterfeit/CF-ROL-0102.webp,CF-ROL-0102,CF-ROL-0102.webp,test,counterfeit,Rolex,small_crop,cropped watch 285 px on the short side (minimum 320)
+test/counterfeit/CF-ROL-0105.jpg,CF-ROL-0105,CF-ROL-0105.jpg,test,counterfeit,Rolex,small_crop,cropped watch 233 px on the short side (minimum 320)
+test/counterfeit/CF-SEI-0351.jpg,CF-SEI-0351,CF-SEI-0351.jpg,test,counterfeit,Seiko,small_crop,cropped watch 286 px on the short side (minimum 320)
+test/counterfeit/CF-SEI-0353.jpg,CF-SEI-0353,CF-SEI-0353.jpg,test,counterfeit,Seiko,small_crop,cropped watch 317 px on the short side (minimum 320)
+test/counterfeit/CF-SEI-0354.jpg,CF-SEI-0354,CF-SEI-0354.jpg,test,counterfeit,Seiko,small_crop,cropped watch 284 px on the short side (minimum 320)
+test/counterfeit/CF-SEI-0356.jpg,CF-SEI-0356,CF-SEI-0356.jpg,test,counterfeit,Seiko,small_crop,cropped watch 285 px on the short side (minimum 320)
+pool/counterfeit/CF-BRE-0425.jpg,CF-BRE-0425,CF-BRE-0425.jpg,pool,counterfeit,Breitling,subsampled,"subsampled: pool/counterfeit/Breitling had 80 images, target 75"
+pool/counterfeit/CF-BRE-0433.jpg,CF-BRE-0433,CF-BRE-0433.jpg,pool,counterfeit,Breitling,subsampled,"subsampled: pool/counterfeit/Breitling had 80 images, target 75"
+pool/counterfeit/CF-BRE-0434.jpg,CF-BRE-0434,CF-BRE-0434.jpg,pool,counterfeit,Breitling,subsampled,"subsampled: pool/counterfeit/Breitling had 80 images, target 75"
+pool/counterfeit/CF-BRE-0444.jpg,CF-BRE-0444,CF-BRE-0444.jpg,pool,counterfeit,Breitling,subsampled,"subsampled: pool/counterfeit/Breitling had 80 images, target 75"
+pool/counterfeit/CF-BRE-0465.jpg,CF-BRE-0465,CF-BRE-0465.jpg,pool,counterfeit,Breitling,subsampled,"subsampled: pool/counterfeit/Breitling had 80 images, target 75"
+pool/counterfeit/CF-SEI-0236.jpg,CF-SEI-0236,CF-SEI-0236.jpg,pool,counterfeit,Seiko,subsampled,"subsampled: pool/counterfeit/Seiko had 92 images, target 75"
+pool/counterfeit/CF-SEI-0238.jpg,CF-SEI-0238,CF-SEI-0238.jpg,pool,counterfeit,Seiko,subsampled,"subsampled: pool/counterfeit/Seiko had 92 images, target 75"
+pool/counterfeit/CF-SEI-0241.jpg,CF-SEI-0241,CF-SEI-0241.jpg,pool,counterfeit,Seiko,subsampled,"subsampled: pool/counterfeit/Seiko had 92 images, target 75"
+pool/counterfeit/CF-SEI-0244.jpg,CF-SEI-0244,CF-SEI-0244.jpg,pool,counterfeit,Seiko,subsampled,"subsampled: pool/counterfeit/Seiko had 92 images, target 75"
+pool/counterfeit/CF-SEI-0279.jpg,CF-SEI-0279,CF-SEI-0279.jpg,pool,counterfeit,Seiko,subsampled,"subsampled: pool/counterfeit/Seiko had 92 images, target 75"
+pool/counterfeit/CF-SEI-0280.jpg,CF-SEI-0280,CF-SEI-0280.jpg,pool,counterfeit,Seiko,subsampled,"subsampled: pool/counterfeit/Seiko had 92 images, target 75"
+pool/counterfeit/CF-SEI-0282.jpg,CF-SEI-0282,CF-SEI-0282.jpg,pool,counterfeit,Seiko,subsampled,"subsampled: pool/counterfeit/Seiko had 92 images, target 75"
+pool/counterfeit/CF-SEI-0296.jpg,CF-SEI-0296,CF-SEI-0296.jpg,pool,counterfeit,Seiko,subsampled,"subsampled: pool/counterfeit/Seiko had 92 images, target 75"
+pool/counterfeit/CF-SEI-0309.jpg,CF-SEI-0309,CF-SEI-0309.jpg,pool,counterfeit,Seiko,subsampled,"subsampled: pool/counterfeit/Seiko had 92 images, target 75"
+pool/counterfeit/CF-SEI-0314.jpg,CF-SEI-0314,CF-SEI-0314.jpg,pool,counterfeit,Seiko,subsampled,"subsampled: pool/counterfeit/Seiko had 92 images, target 75"
+pool/counterfeit/CF-SEI-0322.jpg,CF-SEI-0322,CF-SEI-0322.jpg,pool,counterfeit,Seiko,subsampled,"subsampled: pool/counterfeit/Seiko had 92 images, target 75"
+pool/counterfeit/CF-SEI-0328.jpg,CF-SEI-0328,CF-SEI-0328.jpg,pool,counterfeit,Seiko,subsampled,"subsampled: pool/counterfeit/Seiko had 92 images, target 75"
+pool/counterfeit/CF-SEI-0330.jpg,CF-SEI-0330,CF-SEI-0330.jpg,pool,counterfeit,Seiko,subsampled,"subsampled: pool/counterfeit/Seiko had 92 images, target 75"
+pool/counterfeit/CF-SEI-0336.jpg,CF-SEI-0336,CF-SEI-0336.jpg,pool,counterfeit,Seiko,subsampled,"subsampled: pool/counterfeit/Seiko had 92 images, target 75"
+pool/counterfeit/CF-SEI-0337.jpg,CF-SEI-0337,CF-SEI-0337.jpg,pool,counterfeit,Seiko,subsampled,"subsampled: pool/counterfeit/Seiko had 92 images, target 75"
+pool/counterfeit/CF-SEI-0338.jpg,CF-SEI-0338,CF-SEI-0338.jpg,pool,counterfeit,Seiko,subsampled,"subsampled: pool/counterfeit/Seiko had 92 images, target 75"
+pool/counterfeit/CF-SEI-0343.jpg,CF-SEI-0343,CF-SEI-0343.jpg,pool,counterfeit,Seiko,subsampled,"subsampled: pool/counterfeit/Seiko had 92 images, target 75"
+test/counterfeit/CF-BRE-0412.jpg,CF-BRE-0412,CF-BRE-0412.jpg,test,counterfeit,Breitling,subsampled,"subsampled: test/counterfeit/Breitling had 34 images, target 25"
+test/counterfeit/CF-BRE-0413.jpg,CF-BRE-0413,CF-BRE-0413.jpg,test,counterfeit,Breitling,subsampled,"subsampled: test/counterfeit/Breitling had 34 images, target 25"
+test/counterfeit/CF-BRE-0414.jpg,CF-BRE-0414,CF-BRE-0414.jpg,test,counterfeit,Breitling,subsampled,"subsampled: test/counterfeit/Breitling had 34 images, target 25"
+test/counterfeit/CF-BRE-0418.jpg,CF-BRE-0418,CF-BRE-0418.jpg,test,counterfeit,Breitling,subsampled,"subsampled: test/counterfeit/Breitling had 34 images, target 25"
+test/counterfeit/CF-BRE-0421.jpg,CF-BRE-0421,CF-BRE-0421.jpg,test,counterfeit,Breitling,subsampled,"subsampled: test/counterfeit/Breitling had 34 images, target 25"
+test/counterfeit/CF-BRE-0449.jpg,CF-BRE-0449,CF-BRE-0449.jpg,test,counterfeit,Breitling,subsampled,"subsampled: test/counterfeit/Breitling had 34 images, target 25"
+test/counterfeit/CF-BRE-0452.jpg,CF-BRE-0452,CF-BRE-0452.jpg,test,counterfeit,Breitling,subsampled,"subsampled: test/counterfeit/Breitling had 34 images, target 25"
+test/counterfeit/CF-BRE-0453.jpg,CF-BRE-0453,CF-BRE-0453.jpg,test,counterfeit,Breitling,subsampled,"subsampled: test/counterfeit/Breitling had 34 images, target 25"
+test/counterfeit/CF-BRE-0458.jpg,CF-BRE-0458,CF-BRE-0458.jpg,test,counterfeit,Breitling,subsampled,"subsampled: test/counterfeit/Breitling had 34 images, target 25"

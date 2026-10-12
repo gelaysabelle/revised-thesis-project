@@ -1,0 +1,2 @@
+arch,mode,trained_on_images,phase1_epochs,phase2_epochs,train_minutes,threshold,threshold_source,threshold_fallback,hindsight_best_threshold,n_test_images,test_predicted_counterfeit_share,test_accuracy,test_precision,test_recall,test_f1,test_roc_auc,pth_MB,pt_MB
+efficientnet_b0,full_pool,555,10,17,1.6377,0.3978,pooled out-of-fold Youden,False,0.4383,180,0.5667,0.7056,0.6373,0.8025,0.7104,0.8225,15.5782,15.6302

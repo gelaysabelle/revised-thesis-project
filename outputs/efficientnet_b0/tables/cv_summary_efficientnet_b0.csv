@@ -1,0 +1,11 @@
+arch,evaluated_on,metric,mean,sd,n_runs
+efficientnet_b0,held-out fold,accuracy,0.5242302750500345,0.10586682498773176,15
+efficientnet_b0,held-out fold,precision,0.48330189671643164,0.2282700593146209,15
+efficientnet_b0,held-out fold,recall,0.5896099137478448,0.2572827774086818,15
+efficientnet_b0,held-out fold,f1,0.4883440197127266,0.21471592463434994,15
+efficientnet_b0,held-out fold,roc_auc,0.598649227325055,0.11420795080586738,15
+efficientnet_b0,external test,accuracy,0.6377777777777778,0.048623014415646815,15
+efficientnet_b0,external test,precision,0.5956876367564318,0.08144797034233037,15
+efficientnet_b0,external test,recall,0.7687242798353912,0.1973360297209,15
+efficientnet_b0,external test,f1,0.6452367051446739,0.0841886165887983,15
+efficientnet_b0,external test,roc_auc,0.7654528827368333,0.027840807132815205,15

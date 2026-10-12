@@ -1,0 +1,41 @@
+view,rank,image_id,label,n_missed,missed_by,brand,tier,source,seller,label_tier_num,prob_resnet50,prob_efficientnet_b0,prob_mobilenet_v2,mean_wrongness
+external test (majority of 15 models),1,test/counterfeit/CF-SEI-0352.jpg,1,3,"ResNet50, EfficientNetB0, MobileNetV2",Seiko,Plain,Paterson Jewellers,CF-0022,2.0,0.1697,0.3274,0.3733,0.7099
+external test (majority of 15 models),2,test/counterfeit/CF-OME-0156.webp,1,3,"ResNet50, EfficientNetB0, MobileNetV2",Omega,Plain,ORFactory,CF-0019,2.0,0.2278,0.3786,0.2866,0.7023
+external test (majority of 15 models),3,test/counterfeit/CF-SEI-0349.jpg,1,3,"ResNet50, EfficientNetB0, MobileNetV2",Seiko,Plain,Paterson Jewellers,CF-0022,2.0,0.2655,0.3244,0.3324,0.6926
+external test (majority of 15 models),4,test/counterfeit/CF-OME-0155.jpg,1,3,"ResNet50, EfficientNetB0, MobileNetV2",Omega,Plain,ORFactory,CF-0019,2.0,0.306,0.3693,0.2501,0.6915
+external test (majority of 15 models),5,test/counterfeit/CF-OME-0154.jpg,1,3,"ResNet50, EfficientNetB0, MobileNetV2",Omega,Plain,ORFactory,CF-0019,2.0,0.3719,0.3733,0.268,0.6623
+external test (majority of 15 models),6,test/counterfeit/CF-BRE-0423.jpg,1,3,"ResNet50, EfficientNetB0, MobileNetV2",Breitling,Plain,LuxuryWatch,CF-0012,,0.3305,0.3749,0.3432,0.6505
+external test (majority of 15 models),7,test/counterfeit/CF-OME-0158.webp,1,3,"ResNet50, EfficientNetB0, MobileNetV2",Omega,Plain,ORFactory,CF-0019,2.0,0.317,0.4049,0.3579,0.6401
+external test (majority of 15 models),8,test/counterfeit/CF-BRE-0457.jpg,1,3,"ResNet50, EfficientNetB0, MobileNetV2",Breitling,Plain,ORFactory,CF-0019,,0.3558,0.3499,0.4275,0.6223
+external test (majority of 15 models),9,test/counterfeit/CF-BRE-0422.jpg,1,3,"ResNet50, EfficientNetB0, MobileNetV2",Breitling,Plain,LuxuryWatch,CF-0012,,0.3458,0.3752,0.4235,0.6185
+external test (majority of 15 models),10,test/authentic/AU-BRE-0393.jpg,0,3,"ResNet50, EfficientNetB0, MobileNetV2",Breitling,Uncontrolled,eBay Authenticity Guarantee,AU-0054,2.0,0.6601,0.591,0.5869,0.6127
+external test (majority of 15 models),11,test/authentic/AU-ROL-0088.jpg,0,3,"ResNet50, EfficientNetB0, MobileNetV2",Rolex,Uncontrolled,eBay Authenticity Guarantee,AU-0009,2.0,0.6915,0.6099,0.506,0.6025
+external test (majority of 15 models),12,test/authentic/AU-OME-0198.jpg,0,3,"ResNet50, EfficientNetB0, MobileNetV2",Omega,Uncontrolled,eBay Authenticity Guarantee,AU-0024,2.0,0.5839,0.6457,0.565,0.5982
+external test (majority of 15 models),13,test/authentic/AU-BRE-0392.jpg,0,3,"ResNet50, EfficientNetB0, MobileNetV2",Breitling,Uncontrolled,eBay Authenticity Guarantee,AU-0053,2.0,0.5551,0.5496,0.6021,0.5689
+external test (majority of 15 models),14,test/authentic/AU-BRE-0389.jpg,0,3,"ResNet50, EfficientNetB0, MobileNetV2",Breitling,Uncontrolled,eBay Authenticity Guarantee,AU-0051,2.0,0.6101,0.534,0.5072,0.5504
+external test (majority of 15 models),15,test/authentic/AU-SEI-0295.jpg,0,3,"ResNet50, EfficientNetB0, MobileNetV2",Seiko,Uncontrolled,eBay Authenticity Guarantee,AU-0041,2.0,0.6066,0.5658,0.4614,0.5446
+external test (majority of 15 models),16,test/authentic/AU-OME-0200.jpg,0,3,"ResNet50, EfficientNetB0, MobileNetV2",Omega,Uncontrolled,eBay Authenticity Guarantee,AU-0025,2.0,0.5341,0.5903,0.5059,0.5434
+external test (majority of 15 models),17,test/authentic/AU-SEI-0293.jpg,0,3,"ResNet50, EfficientNetB0, MobileNetV2",Seiko,Uncontrolled,eBay Authenticity Guarantee,AU-0040,2.0,0.5385,0.5271,0.556,0.5406
+external test (majority of 15 models),18,test/authentic/AU-SEI-0290.jpg,0,3,"ResNet50, EfficientNetB0, MobileNetV2",Seiko,Uncontrolled,eBay Authenticity Guarantee,AU-0039,2.0,0.5824,0.4808,0.5401,0.5344
+external test (majority of 15 models),19,test/authentic/AU-BRE-0387.jpg,0,3,"ResNet50, EfficientNetB0, MobileNetV2",Breitling,Uncontrolled,eBay Authenticity Guarantee,AU-0051,2.0,0.5263,0.5459,0.4709,0.5144
+external test (majority of 15 models),20,test/authentic/AU-BRE-0386.jpg,0,3,"ResNet50, EfficientNetB0, MobileNetV2",Breitling,Uncontrolled,eBay Authenticity Guarantee,AU-0050,2.0,0.5563,0.5054,0.4758,0.5125
+pooled out-of-fold (majority of seeds),1,pool/counterfeit/CF-ROL-0068.jpg,1,3,"ResNet50, EfficientNetB0, MobileNetV2",Rolex,Uncontrolled,Clean Factory,CF-0008,2.0,0.1489,0.1674,0.1677,0.8386
+pooled out-of-fold (majority of seeds),2,pool/counterfeit/CF-OME-0182.jpeg,1,3,"ResNet50, EfficientNetB0, MobileNetV2",Omega,Uncontrolled,VSF,CF-0015,2.0,0.1401,0.1936,0.2332,0.811
+pooled out-of-fold (majority of seeds),3,pool/counterfeit/CF-OME-0185.jpeg,1,3,"ResNet50, EfficientNetB0, MobileNetV2",Omega,Uncontrolled,VSF,CF-0015,2.0,0.2355,0.2987,0.1761,0.7632
+pooled out-of-fold (majority of seeds),4,pool/counterfeit/CF-SEI-0313.jpg,1,3,"ResNet50, EfficientNetB0, MobileNetV2",Seiko,Plain,Paterson Jewellers,CF-0022,2.0,0.2421,0.1982,0.3449,0.7382
+pooled out-of-fold (majority of seeds),5,pool/counterfeit/CF-SEI-0311.jpg,1,3,"ResNet50, EfficientNetB0, MobileNetV2",Seiko,Plain,Paterson Jewellers,CF-0022,2.0,0.1804,0.2417,0.3709,0.7357
+pooled out-of-fold (majority of seeds),6,pool/counterfeit/CF-SEI-0345.jpg,1,3,"ResNet50, EfficientNetB0, MobileNetV2",Seiko,Plain,Paterson Jewellers,CF-0022,2.0,0.2998,0.2146,0.2789,0.7356
+pooled out-of-fold (majority of seeds),7,pool/counterfeit/CF-SEI-0312.jpg,1,3,"ResNet50, EfficientNetB0, MobileNetV2",Seiko,Plain,Paterson Jewellers,CF-0022,2.0,0.2517,0.2884,0.273,0.729
+pooled out-of-fold (majority of seeds),8,pool/counterfeit/CF-SEI-0321.jpg,1,3,"ResNet50, EfficientNetB0, MobileNetV2",Seiko,Plain,Paterson Jewellers,CF-0022,2.0,0.3153,0.2183,0.3088,0.7192
+pooled out-of-fold (majority of seeds),9,pool/counterfeit/CF-BRE-0365.webp,1,3,"ResNet50, EfficientNetB0, MobileNetV2",Breitling,Plain,AllReplicaWatches,CF-0013,2.0,0.3738,0.1606,0.3118,0.7179
+pooled out-of-fold (majority of seeds),10,pool/counterfeit/CF-BRE-0404.jpg,1,3,"ResNet50, EfficientNetB0, MobileNetV2",Breitling,Plain,BP Watch Factory,CF-0018,,0.2767,0.2959,0.2901,0.7124
+pooled out-of-fold (majority of seeds),11,pool/counterfeit/CF-SEI-0315.jpg,1,3,"ResNet50, EfficientNetB0, MobileNetV2",Seiko,Plain,Paterson Jewellers,CF-0022,2.0,0.294,0.2194,0.3515,0.7117
+pooled out-of-fold (majority of seeds),12,pool/counterfeit/CF-SEI-0318.jpg,1,3,"ResNet50, EfficientNetB0, MobileNetV2",Seiko,Plain,Paterson Jewellers,CF-0022,2.0,0.2395,0.2868,0.3589,0.7049
+pooled out-of-fold (majority of seeds),13,pool/counterfeit/CF-SEI-0327.jpg,1,3,"ResNet50, EfficientNetB0, MobileNetV2",Seiko,Plain,Paterson Jewellers,CF-0022,2.0,0.2799,0.3092,0.2991,0.7039
+pooled out-of-fold (majority of seeds),14,pool/authentic/AU-SEI-0237.jpg,0,3,"ResNet50, EfficientNetB0, MobileNetV2",Seiko,Uncontrolled,Chrono24 PH dealer,AU-0031,2.0,0.6719,0.7868,0.6487,0.7025
+pooled out-of-fold (majority of seeds),15,pool/counterfeit/CF-SEI-0323.jpg,1,3,"ResNet50, EfficientNetB0, MobileNetV2",Seiko,Plain,Paterson Jewellers,CF-0022,2.0,0.3032,0.2521,0.3393,0.7018
+pooled out-of-fold (majority of seeds),16,pool/counterfeit/CF-SEI-0319.jpg,1,3,"ResNet50, EfficientNetB0, MobileNetV2",Seiko,Plain,Paterson Jewellers,CF-0022,2.0,0.3081,0.248,0.343,0.7003
+pooled out-of-fold (majority of seeds),17,pool/counterfeit/CF-SEI-0308.jpg,1,3,"ResNet50, EfficientNetB0, MobileNetV2",Seiko,Plain,Paterson Jewellers,CF-0022,2.0,0.2822,0.2243,0.4093,0.6947
+pooled out-of-fold (majority of seeds),18,pool/counterfeit/CF-SEI-0295.jpg,1,3,"ResNet50, EfficientNetB0, MobileNetV2",Seiko,Plain,Reddit Community,CF-0014,2.0,0.2736,0.3549,0.3017,0.69
+pooled out-of-fold (majority of seeds),19,pool/counterfeit/CF-BRE-0366.webp,1,3,"ResNet50, EfficientNetB0, MobileNetV2",Breitling,Plain,AllReplicaWatches,CF-0013,2.0,0.3741,0.227,0.347,0.684
+pooled out-of-fold (majority of seeds),20,pool/counterfeit/CF-SEI-0324.jpg,1,3,"ResNet50, EfficientNetB0, MobileNetV2",Seiko,Plain,Paterson Jewellers,CF-0022,2.0,0.3723,0.3021,0.2756,0.6834

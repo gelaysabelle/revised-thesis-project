@@ -1,0 +1,10 @@
+view,arch,n_sellers,n_sellers_with_errors,total_errors,top3_share_of_errors,top10pct_share_of_errors,top3_share_of_images
+pooled out-of-fold (majority of seeds),resnet50,52,40,217,0.3226,0.4885,0.1946
+pooled out-of-fold (majority of seeds),efficientnet_b0,52,40,250,0.268,0.4,0.1946
+pooled out-of-fold (majority of seeds),mobilenet_v2,52,40,223,0.3049,0.4664,0.1946
+external test (majority of 15 models),resnet50,35,26,57,0.3684,0.4211,0.2833
+external test (majority of 15 models),efficientnet_b0,35,28,58,0.2931,0.3621,0.2833
+external test (majority of 15 models),mobilenet_v2,35,29,54,0.3704,0.4259,0.2833
+external test (final model),resnet50,35,27,69,0.3333,0.4058,0.2833
+external test (final model),efficientnet_b0,35,25,53,0.3019,0.3774,0.2833
+external test (final model),mobilenet_v2,35,28,50,0.38,0.42,0.2833

@@ -1,0 +1,6 @@
+arch,threshold,kind,value,accuracy,precision,recall,f1,roc_auc,tn,fp,fn,tp,predicted_counterfeit_share
+resnet50,0.3,fixed,0.3,0.6056,0.5403,0.8272,0.6537,0.7182,42,57,14,67,0.6889
+resnet50,0.5,fixed,0.5,0.6556,0.6508,0.5062,0.5694,0.7182,77,22,40,41,0.35
+resnet50,0.7,fixed,0.7,0.5944,0.8333,0.1235,0.2151,0.7182,97,2,71,10,0.0667
+resnet50,frozen,"frozen theta, used for the model (pooled out-of-fold Youden)",0.4149,0.6167,0.5667,0.6296,0.5965,0.7182,60,39,30,51,0.5
+resnet50,hindsight_best,"best Youden J on the test set (descriptive only, never used)",0.5496,0.6944,0.7955,0.4321,0.56,0.7182,90,9,46,35,0.2444

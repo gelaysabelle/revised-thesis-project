@@ -1,0 +1,2 @@
+arch,cv_f1,cv_roc_auc,test_f1,test_roc_auc,final_model_test_roc_auc,params_M,flops_M_macs,inference_ms_per_image
+efficientnet_b0,0.4883,0.5986,0.6452,0.7655,0.8225,4.0088,784.1133,7.985

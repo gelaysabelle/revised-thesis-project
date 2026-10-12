@@ -1,0 +1,7 @@
+split,cls,drop_reason,n
+pool,authentic,kept,300
+pool,counterfeit,kept,312
+pool,counterfeit,low_resolution,29
+test,authentic,kept,100
+test,counterfeit,kept,104
+test,counterfeit,low_resolution,14

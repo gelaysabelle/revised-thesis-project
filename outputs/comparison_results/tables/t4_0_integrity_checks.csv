@@ -1,0 +1,29 @@
+check,status,detail
+The three expected architectures are present,OK,"ResNet50, EfficientNetB0, MobileNetV2"
+"Required files exist: tables, predictions, final-model predictions and table, final .pth and .pt",OK,ResNet50: all found; EfficientNetB0: all found; MobileNetV2: all found
+runs/ folder exists,OK,ResNet50: found; EfficientNetB0: found; MobileNetV2: found
+Final-model files are not empty,OK,ResNet50: non-empty; EfficientNetB0: non-empty; MobileNetV2: non-empty
+15 runs in runs_<arch>.csv (5 folds x 3 seeds),OK,"ResNet50: 15 rows, 15 distinct fold/seed pairs, 3 seeds; EfficientNetB0: 15 rows, 15 distinct fold/seed pairs, 3 seeds; MobileNetV2: 15 rows, 15 distinct fold/seed pairs, 3 seeds"
+runs/ holds 15 run files of each kind,OK,"ResNet50: 15 json, 15 predictions, 15 histories; EfficientNetB0: 15 json, 15 predictions, 15 histories; MobileNetV2: 15 json, 15 predictions, 15 histories"
+runs/ predictions agree with predictions/oof and test files,OK,ResNet50: 4365 rows in runs/ vs 4365 in predictions/; EfficientNetB0: 4365 rows in runs/ vs 4365 in predictions/; MobileNetV2: 4365 rows in runs/ vs 4365 in predictions/
+"Exactly one final model, scored on every test image once",OK,"ResNet50: 1 final model, 180 test predictions; EfficientNetB0: 1 final model, 180 test predictions; MobileNetV2: 1 final model, 180 test predictions"
+"One settings hash (config_sig) in every run of the architecture, table and run files agree",OK,ResNet50: 9681faf46ae2; EfficientNetB0: 9681faf46ae2; MobileNetV2: 9681faf46ae2
+"Same settings hash in all three architectures (epochs, unfrozen blocks, learning rates, augmentation, ...)",OK,9681faf46ae2
+Same input_size,OK,[320]
+"Same training, validation and held-out sizes in every run",OK,5278af43
+Final models: same mode,OK,full_pool
+Final models: same trained_on_images,OK,555
+Final models: same phase1_epochs,OK,10
+fold_assignments.csv identical in all three (file hash),OK,7d4628b83fd2
+Folds used in the out-of-fold predictions match fold_assignments.csv,OK,ResNet50: predictions use the folds of the file; EfficientNetB0: predictions use the folds of the file; MobileNetV2: predictions use the folds of the file
+Same pool image_id list (fold file),OK,2a46d9db
+Same pool image_id list (out-of-fold predictions),OK,2a46d9db
+Every pool image is held out exactly once per seed,OK,ResNet50: yes; EfficientNetB0: yes; MobileNetV2: yes
+Same test image_id list (15-model predictions and final models),OK,0c9f37f6
+Pool and test image lists do not overlap,OK,"555 pool, 180 test, 0 shared"
+Same labels for every image,OK,c9a90165
+Final .pth files carry the same preprocessing metadata,OK,"{'input_size': 320, 'imagenet_mean': [0.485, 0.456, 0.406], 'imagenet_std': [0.229, 0.224, 0.225], 'bg_fill': (255, 255, 255), 'class_to_idx': ""{'authentic': 0, 'counterfeit': 1}"", 'positive_class': 'counterfeit', 'preprocessing': 'rembg isolation, strap trim, tight crop with margin, white square pad, 320 px area resize, JPEG quality 95, ImageNet normalisation'}"
+Final .pth architecture matches its file name,OK,yes
+Same hardware for the complexity benchmark (latency and training time are only comparable on one GPU),OK,Tesla T4
+Layer tables for the per-layer complexity terms,OK,all found
+Runs whose validation threshold fell back to 0.5,OK,"ResNet50 0, EfficientNetB0 0, MobileNetV2 0"

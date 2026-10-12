@@ -1,0 +1,16 @@
+fold,role,n,n_authentic,n_counterfeit,n_plain,n_uncontrolled,tier_source
+0,train,265,145,120,63,202,metadata
+0,val,73,41,32,0,73,metadata
+0,heldout,217,106,111,154,63,metadata
+1,train,384,186,198,175,209,metadata
+1,val,70,34,36,10,60,metadata
+1,heldout,101,72,29,32,69,metadata
+2,train,376,211,165,181,195,metadata
+2,val,75,43,32,26,49,metadata
+2,heldout,104,38,66,10,94,metadata
+3,train,431,216,215,179,252,metadata
+3,val,72,37,35,26,46,metadata
+3,heldout,52,39,13,12,40,metadata
+4,train,403,217,186,176,227,metadata
+4,val,71,38,33,32,39,metadata
+4,heldout,81,37,44,9,72,metadata

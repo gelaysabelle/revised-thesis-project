@@ -1,0 +1,4 @@
+arch,Model,ROC-AUC (external test),ROC-AUC sd over runs,Inference latency (ms/img),Model size (MB),1 - ROC-AUC,Throughput (img/s),Pareto (vs latency),Pareto (vs size)
+resnet50,ResNet50,0.7187,0.0161,8.4312,89.989,0.2813,118.6071,False,False
+efficientnet_b0,EfficientNetB0,0.7655,0.0278,7.985,15.5816,0.2345,125.2348,True,True
+mobilenet_v2,MobileNetV2,0.76,0.0174,5.1782,8.7247,0.24,193.1173,True,True

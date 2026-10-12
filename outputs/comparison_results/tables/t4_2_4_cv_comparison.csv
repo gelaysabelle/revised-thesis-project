@@ -1,0 +1,16 @@
+block,metric,ResNet50,EfficientNetB0,MobileNetV2
+"Held-out (mean ± sd, 15 runs)",Accuracy,0.603 ± 0.061,0.524 ± 0.106,0.584 ± 0.093
+"Held-out (mean ± sd, 15 runs)",Precision,0.560 ± 0.216,0.483 ± 0.228,0.514 ± 0.256
+"Held-out (mean ± sd, 15 runs)",Recall,0.555 ± 0.184,0.590 ± 0.257,0.542 ± 0.297
+"Held-out (mean ± sd, 15 runs)",F1,0.529 ± 0.157,0.488 ± 0.215,0.480 ± 0.224
+"Held-out (mean ± sd, 15 runs)",ROC-AUC,0.674 ± 0.080,0.599 ± 0.114,0.648 ± 0.079
+"Pooled out-of-fold (mean ± sd, 3 seeds)",Accuracy,0.613 ± 0.013,0.541 ± 0.005,0.578 ± 0.022
+"Pooled out-of-fold (mean ± sd, 3 seeds)",Precision,0.607 ± 0.020,0.513 ± 0.004,0.557 ± 0.020
+"Pooled out-of-fold (mean ± sd, 3 seeds)",Recall,0.522 ± 0.053,0.599 ± 0.163,0.535 ± 0.139
+"Pooled out-of-fold (mean ± sd, 3 seeds)",F1,0.560 ± 0.028,0.546 ± 0.074,0.540 ± 0.075
+"Pooled out-of-fold (mean ± sd, 3 seeds)",ROC-AUC,0.701 ± 0.006,0.645 ± 0.003,0.670 ± 0.016
+Pooled out-of-fold bootstrap 95% CI,Accuracy,"[0.542, 0.679]","[0.439, 0.616]","[0.520, 0.649]"
+Pooled out-of-fold bootstrap 95% CI,Precision,"[0.376, 0.736]","[0.291, 0.661]","[0.335, 0.705]"
+Pooled out-of-fold bootstrap 95% CI,Recall,"[0.414, 0.751]","[0.503, 0.792]","[0.421, 0.741]"
+Pooled out-of-fold bootstrap 95% CI,F1,"[0.430, 0.685]","[0.392, 0.679]","[0.412, 0.678]"
+Pooled out-of-fold bootstrap 95% CI,ROC-AUC,"[0.611, 0.790]","[0.557, 0.750]","[0.592, 0.753]"

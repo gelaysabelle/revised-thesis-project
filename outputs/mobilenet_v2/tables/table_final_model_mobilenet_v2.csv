@@ -1,0 +1,2 @@
+arch,mode,trained_on_images,phase1_epochs,phase2_epochs,train_minutes,threshold,threshold_source,threshold_fallback,hindsight_best_threshold,n_test_images,test_predicted_counterfeit_share,test_accuracy,test_precision,test_recall,test_f1,test_roc_auc,pth_MB,pt_MB
+mobilenet_v2,full_pool,555,10,18,1.694,0.4244,pooled out-of-fold Youden,False,0.4103,180,0.5056,0.7222,0.6703,0.7531,0.7093,0.7982,8.7218,8.7554

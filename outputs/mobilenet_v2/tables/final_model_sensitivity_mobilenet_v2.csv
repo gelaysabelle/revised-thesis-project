@@ -1,0 +1,6 @@
+arch,threshold,kind,value,accuracy,precision,recall,f1,roc_auc,tn,fp,fn,tp,predicted_counterfeit_share
+mobilenet_v2,0.3,fixed,0.3,0.6,0.5315,0.9383,0.6786,0.7982,32,67,5,76,0.7944
+mobilenet_v2,0.5,fixed,0.5,0.7222,0.7818,0.5309,0.6324,0.7982,87,12,38,43,0.3056
+mobilenet_v2,0.7,fixed,0.7,0.5667,1.0,0.037,0.0714,0.7982,99,0,78,3,0.0167
+mobilenet_v2,frozen,"frozen theta, used for the model (pooled out-of-fold Youden)",0.4244,0.7222,0.6703,0.7531,0.7093,0.7982,69,30,20,61,0.5056
+mobilenet_v2,hindsight_best,"best Youden J on the test set (descriptive only, never used)",0.4103,0.7389,0.6771,0.8025,0.7345,0.7982,68,31,16,65,0.5333

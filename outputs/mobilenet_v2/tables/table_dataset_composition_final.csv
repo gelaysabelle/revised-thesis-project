@@ -1,0 +1,17 @@
+split,cls,brand,n_images
+pool,authentic,Breitling,73
+pool,authentic,Omega,74
+pool,authentic,Rolex,70
+pool,authentic,Seiko,75
+pool,counterfeit,Breitling,75
+pool,counterfeit,Omega,62
+pool,counterfeit,Rolex,51
+pool,counterfeit,Seiko,75
+test,authentic,Breitling,25
+test,authentic,Omega,25
+test,authentic,Rolex,24
+test,authentic,Seiko,25
+test,counterfeit,Breitling,25
+test,counterfeit,Omega,16
+test,counterfeit,Rolex,16
+test,counterfeit,Seiko,24

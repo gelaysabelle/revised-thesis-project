@@ -1,0 +1,2 @@
+total_params_M,phase1_trainable_params_M,phase2_trainable_params_M,flops_M_macs,conv_linear_macs_M,model_size_MB,inference_ms_per_image,inference_device,hardware,peak_vram_inference_MB,peak_vram_training_MB,inference_ms_per_image_cpu,arch,input_size,train_min_per_epoch_all,train_min_per_epoch_phase2,train_min_per_run_cv_mean,train_min_final_model
+23.5101,0.002,4.4646,8341.0964,8341.0964,89.989,8.4312,cuda,Tesla T4,328.8716,722.2656,153.3076,resnet50,320,0.063,0.0631,1.7853,2.0034

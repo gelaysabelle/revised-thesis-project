@@ -1,0 +1,17 @@
+split,cls,brand,before,target,after,removed,short_of_target,plain_share_before,plain_share_after,sources_before,sources_after,sellers_before,sellers_after,brand_website_before,brand_website_after
+pool,authentic,Breitling,73,75,73,0,2,0.410958904109589,0.410958904109589,2,2,9,9,30,30
+pool,authentic,Omega,74,75,74,0,1,0.40540540540540543,0.40540540540540543,2,2,8,8,30,30
+pool,authentic,Rolex,70,75,70,0,5,0.37142857142857144,0.37142857142857144,2,2,8,8,26,26
+pool,authentic,Seiko,75,75,75,0,0,0.4,0.4,2,2,12,12,30,30
+pool,counterfeit,Breitling,80,75,75,5,0,0.3125,0.3333333333333333,8,8,8,8,0,0
+pool,counterfeit,Omega,62,75,62,0,13,0.41935483870967744,0.41935483870967744,9,9,9,9,0,0
+pool,counterfeit,Rolex,51,75,51,0,24,0.39215686274509803,0.39215686274509803,9,9,8,8,0,0
+pool,counterfeit,Seiko,92,75,75,17,0,0.42391304347826086,0.4,2,2,2,2,0,0
+test,authentic,Breitling,25,25,25,0,0,0.4,0.4,2,2,9,9,10,10
+test,authentic,Omega,25,25,25,0,0,0.4,0.4,2,2,9,9,10,10
+test,authentic,Rolex,24,25,24,0,1,0.375,0.375,2,2,4,4,9,9
+test,authentic,Seiko,25,25,25,0,0,0.4,0.4,2,2,6,6,10,10
+test,counterfeit,Breitling,34,25,25,9,0,0.6176470588235294,0.48,4,4,4,4,0,0
+test,counterfeit,Omega,16,25,16,0,9,0.625,0.625,3,3,3,3,0,0
+test,counterfeit,Rolex,16,25,16,0,9,0.0,0.0,3,3,3,3,0,0
+test,counterfeit,Seiko,24,25,24,0,1,0.2916666666666667,0.2916666666666667,2,2,2,2,0,0

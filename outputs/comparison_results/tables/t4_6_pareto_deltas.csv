@@ -1,0 +1,4 @@
+Model,Quality,Error,Latency,Throughput,Size,d_latency_vs_fastest_optimal_pct,d_roc_auc_vs_fastest_optimal_points_x100,d_size_vs_smallest_optimal_pct,d_roc_auc_vs_smallest_optimal_points_x100
+ResNet50,0.7187,0.2813,8.4312,118.6071,89.989,62.8211,-4.1314,931.428,-4.1314
+EfficientNetB0,0.7655,0.2345,7.985,125.2348,15.5816,54.2042,0.5479,78.5918,0.5479
+MobileNetV2,0.76,0.24,5.1782,193.1173,8.7247,0.0,0.0,0.0,0.0

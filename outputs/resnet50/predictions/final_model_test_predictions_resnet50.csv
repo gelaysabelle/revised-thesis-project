@@ -1,0 +1,181 @@
+arch,image_id,group_id,brand,tier,source,seller,cls,label,prob,theta,pred
+resnet50,test/authentic/AU-BRE-0376.jpg,8,Breitling,Plain,Brand website,AU-0049,authentic,0,0.21917035,0.41488953333333334,0
+resnet50,test/authentic/AU-BRE-0377.jpg,8,Breitling,Plain,Brand website,AU-0049,authentic,0,0.22017473,0.41488953333333334,0
+resnet50,test/authentic/AU-BRE-0378.jpg,8,Breitling,Plain,Brand website,AU-0049,authentic,0,0.15843461,0.41488953333333334,0
+resnet50,test/authentic/AU-BRE-0379.jpg,8,Breitling,Plain,Brand website,AU-0049,authentic,0,0.33917066,0.41488953333333334,0
+resnet50,test/authentic/AU-BRE-0380.jpg,8,Breitling,Plain,Brand website,AU-0049,authentic,0,0.15934819,0.41488953333333334,0
+resnet50,test/authentic/AU-BRE-0381.jpg,8,Breitling,Plain,Brand website,AU-0049,authentic,0,0.27845296,0.41488953333333334,0
+resnet50,test/authentic/AU-BRE-0382.jpg,8,Breitling,Plain,Brand website,AU-0049,authentic,0,0.12819736,0.41488953333333334,0
+resnet50,test/authentic/AU-BRE-0383.jpg,8,Breitling,Plain,Brand website,AU-0049,authentic,0,0.36263055,0.41488953333333334,0
+resnet50,test/authentic/AU-BRE-0384.jpg,8,Breitling,Plain,Brand website,AU-0049,authentic,0,0.10743748,0.41488953333333334,0
+resnet50,test/authentic/AU-BRE-0385.jpg,8,Breitling,Plain,Brand website,AU-0049,authentic,0,0.116764,0.41488953333333334,0
+resnet50,test/authentic/AU-BRE-0386.jpg,43,Breitling,Uncontrolled,eBay Authenticity Guarantee,AU-0050,authentic,0,0.5464659,0.41488953333333334,1
+resnet50,test/authentic/AU-BRE-0387.jpg,44,Breitling,Uncontrolled,eBay Authenticity Guarantee,AU-0051,authentic,0,0.4864459,0.41488953333333334,1
+resnet50,test/authentic/AU-BRE-0388.jpg,44,Breitling,Uncontrolled,eBay Authenticity Guarantee,AU-0051,authentic,0,0.51246387,0.41488953333333334,1
+resnet50,test/authentic/AU-BRE-0389.jpg,44,Breitling,Uncontrolled,eBay Authenticity Guarantee,AU-0051,authentic,0,0.64579034,0.41488953333333334,1
+resnet50,test/authentic/AU-BRE-0390.jpg,45,Breitling,Uncontrolled,eBay Authenticity Guarantee,AU-0052,authentic,0,0.48457065,0.41488953333333334,1
+resnet50,test/authentic/AU-BRE-0391.jpg,45,Breitling,Uncontrolled,eBay Authenticity Guarantee,AU-0052,authentic,0,0.53591824,0.41488953333333334,1
+resnet50,test/authentic/AU-BRE-0392.jpg,46,Breitling,Uncontrolled,eBay Authenticity Guarantee,AU-0053,authentic,0,0.47834608,0.41488953333333334,1
+resnet50,test/authentic/AU-BRE-0393.jpg,47,Breitling,Uncontrolled,eBay Authenticity Guarantee,AU-0054,authentic,0,0.7129322,0.41488953333333334,1
+resnet50,test/authentic/AU-BRE-0394.jpg,48,Breitling,Uncontrolled,eBay Authenticity Guarantee,AU-0055,authentic,0,0.4269188,0.41488953333333334,1
+resnet50,test/authentic/AU-BRE-0395.jpg,48,Breitling,Uncontrolled,eBay Authenticity Guarantee,AU-0055,authentic,0,0.4257843,0.41488953333333334,1
+resnet50,test/authentic/AU-BRE-0396.jpg,48,Breitling,Uncontrolled,eBay Authenticity Guarantee,AU-0055,authentic,0,0.27202454,0.41488953333333334,0
+resnet50,test/authentic/AU-BRE-0397.jpg,49,Breitling,Uncontrolled,eBay Authenticity Guarantee,AU-0056,authentic,0,0.49428585,0.41488953333333334,1
+resnet50,test/authentic/AU-BRE-0398.jpg,49,Breitling,Uncontrolled,eBay Authenticity Guarantee,AU-0056,authentic,0,0.5388619,0.41488953333333334,1
+resnet50,test/authentic/AU-BRE-0399.jpg,50,Breitling,Uncontrolled,eBay Authenticity Guarantee,AU-0057,authentic,0,0.515437,0.41488953333333334,1
+resnet50,test/authentic/AU-BRE-0400.jpg,50,Breitling,Uncontrolled,eBay Authenticity Guarantee,AU-0057,authentic,0,0.53339744,0.41488953333333334,1
+resnet50,test/authentic/AU-OME-0176.jpg,8,Omega,Plain,Brand website,AU-0018,authentic,0,0.14730968,0.41488953333333334,0
+resnet50,test/authentic/AU-OME-0177.jpg,8,Omega,Plain,Brand website,AU-0018,authentic,0,0.20946968,0.41488953333333334,0
+resnet50,test/authentic/AU-OME-0178.jpg,8,Omega,Plain,Brand website,AU-0018,authentic,0,0.1422319,0.41488953333333334,0
+resnet50,test/authentic/AU-OME-0179.jpg,8,Omega,Plain,Brand website,AU-0018,authentic,0,0.20323272,0.41488953333333334,0
+resnet50,test/authentic/AU-OME-0180.jpg,8,Omega,Plain,Brand website,AU-0018,authentic,0,0.25757828,0.41488953333333334,0
+resnet50,test/authentic/AU-OME-0181.jpg,8,Omega,Plain,Brand website,AU-0018,authentic,0,0.09451043,0.41488953333333334,0
+resnet50,test/authentic/AU-OME-0182.jpg,8,Omega,Plain,Brand website,AU-0018,authentic,0,0.1266771,0.41488953333333334,0
+resnet50,test/authentic/AU-OME-0183.jpg,8,Omega,Plain,Brand website,AU-0018,authentic,0,0.05223086,0.41488953333333334,0
+resnet50,test/authentic/AU-OME-0184.jpg,8,Omega,Plain,Brand website,AU-0018,authentic,0,0.035144847,0.41488953333333334,0
+resnet50,test/authentic/AU-OME-0185.jpg,8,Omega,Plain,Brand website,AU-0018,authentic,0,0.1742697,0.41488953333333334,0
+resnet50,test/authentic/AU-OME-0186.jpg,0,Omega,Uncontrolled,eBay Authenticity Guarantee,AU-0011,authentic,0,0.31890923,0.41488953333333334,0
+resnet50,test/authentic/AU-OME-0187.jpg,0,Omega,Uncontrolled,eBay Authenticity Guarantee,AU-0011,authentic,0,0.09982066,0.41488953333333334,0
+resnet50,test/authentic/AU-OME-0188.jpg,51,Omega,Uncontrolled,eBay Authenticity Guarantee,AU-0019,authentic,0,0.36398596,0.41488953333333334,0
+resnet50,test/authentic/AU-OME-0189.jpg,52,Omega,Uncontrolled,eBay Authenticity Guarantee,AU-0020,authentic,0,0.21206883,0.41488953333333334,0
+resnet50,test/authentic/AU-OME-0190.jpg,52,Omega,Uncontrolled,eBay Authenticity Guarantee,AU-0020,authentic,0,0.56685793,0.41488953333333334,1
+resnet50,test/authentic/AU-OME-0191.jpg,52,Omega,Uncontrolled,eBay Authenticity Guarantee,AU-0020,authentic,0,0.12252322,0.41488953333333334,0
+resnet50,test/authentic/AU-OME-0192.jpg,52,Omega,Uncontrolled,eBay Authenticity Guarantee,AU-0020,authentic,0,0.2487166,0.41488953333333334,0
+resnet50,test/authentic/AU-OME-0193.jpg,53,Omega,Uncontrolled,eBay Authenticity Guarantee,AU-0021,authentic,0,0.30704626,0.41488953333333334,0
+resnet50,test/authentic/AU-OME-0194.jpg,54,Omega,Uncontrolled,eBay Authenticity Guarantee,AU-0022,authentic,0,0.5053251,0.41488953333333334,1
+resnet50,test/authentic/AU-OME-0195.jpg,55,Omega,Uncontrolled,eBay Authenticity Guarantee,AU-0023,authentic,0,0.15520649,0.41488953333333334,0
+resnet50,test/authentic/AU-OME-0196.jpg,55,Omega,Uncontrolled,eBay Authenticity Guarantee,AU-0023,authentic,0,0.39460912,0.41488953333333334,0
+resnet50,test/authentic/AU-OME-0197.jpg,0,Omega,Uncontrolled,eBay Authenticity Guarantee,AU-0011,authentic,0,0.2955348,0.41488953333333334,0
+resnet50,test/authentic/AU-OME-0198.jpg,56,Omega,Uncontrolled,eBay Authenticity Guarantee,AU-0024,authentic,0,0.56661814,0.41488953333333334,1
+resnet50,test/authentic/AU-OME-0199.jpg,57,Omega,Uncontrolled,eBay Authenticity Guarantee,AU-0025,authentic,0,0.4487886,0.41488953333333334,1
+resnet50,test/authentic/AU-OME-0200.jpg,57,Omega,Uncontrolled,eBay Authenticity Guarantee,AU-0025,authentic,0,0.51065665,0.41488953333333334,1
+resnet50,test/authentic/AU-ROL-0076.jpg,18,Rolex,Plain,Brand website,AU-0008,authentic,0,0.07423137,0.41488953333333334,0
+resnet50,test/authentic/AU-ROL-0077.jpg,18,Rolex,Plain,Brand website,AU-0008,authentic,0,0.06198946,0.41488953333333334,0
+resnet50,test/authentic/AU-ROL-0078.jpg,18,Rolex,Plain,Brand website,AU-0008,authentic,0,0.30383506,0.41488953333333334,0
+resnet50,test/authentic/AU-ROL-0079.jpg,18,Rolex,Plain,Brand website,AU-0008,authentic,0,0.2043419,0.41488953333333334,0
+resnet50,test/authentic/AU-ROL-0080.jpg,18,Rolex,Plain,Brand website,AU-0008,authentic,0,0.10837755,0.41488953333333334,0
+resnet50,test/authentic/AU-ROL-0082.jpg,18,Rolex,Plain,Brand website,AU-0008,authentic,0,0.17823958,0.41488953333333334,0
+resnet50,test/authentic/AU-ROL-0083.jpg,18,Rolex,Plain,Brand website,AU-0008,authentic,0,0.11318691,0.41488953333333334,0
+resnet50,test/authentic/AU-ROL-0084.jpg,18,Rolex,Plain,Brand website,AU-0008,authentic,0,0.102844074,0.41488953333333334,0
+resnet50,test/authentic/AU-ROL-0085.jpg,18,Rolex,Plain,Brand website,AU-0008,authentic,0,0.14199378,0.41488953333333334,0
+resnet50,test/authentic/AU-ROL-0086.jpg,58,Rolex,Uncontrolled,eBay Authenticity Guarantee,AU-0009,authentic,0,0.4180434,0.41488953333333334,1
+resnet50,test/authentic/AU-ROL-0087.jpg,58,Rolex,Uncontrolled,eBay Authenticity Guarantee,AU-0009,authentic,0,0.20275871,0.41488953333333334,0
+resnet50,test/authentic/AU-ROL-0088.jpg,58,Rolex,Uncontrolled,eBay Authenticity Guarantee,AU-0009,authentic,0,0.7516481,0.41488953333333334,1
+resnet50,test/authentic/AU-ROL-0089.jpg,58,Rolex,Uncontrolled,eBay Authenticity Guarantee,AU-0009,authentic,0,0.68605465,0.41488953333333334,1
+resnet50,test/authentic/AU-ROL-0090.jpg,59,Rolex,Uncontrolled,eBay Authenticity Guarantee,AU-0010,authentic,0,0.1284158,0.41488953333333334,0
+resnet50,test/authentic/AU-ROL-0091.jpg,59,Rolex,Uncontrolled,eBay Authenticity Guarantee,AU-0010,authentic,0,0.41117,0.41488953333333334,0
+resnet50,test/authentic/AU-ROL-0092.jpg,59,Rolex,Uncontrolled,eBay Authenticity Guarantee,AU-0010,authentic,0,0.17161581,0.41488953333333334,0
+resnet50,test/authentic/AU-ROL-0093.jpg,59,Rolex,Uncontrolled,eBay Authenticity Guarantee,AU-0010,authentic,0,0.26607114,0.41488953333333334,0
+resnet50,test/authentic/AU-ROL-0094.jpg,59,Rolex,Uncontrolled,eBay Authenticity Guarantee,AU-0010,authentic,0,0.124425635,0.41488953333333334,0
+resnet50,test/authentic/AU-ROL-0095.jpg,59,Rolex,Uncontrolled,eBay Authenticity Guarantee,AU-0010,authentic,0,0.44842628,0.41488953333333334,1
+resnet50,test/authentic/AU-ROL-0096.jpg,0,Rolex,Uncontrolled,eBay Authenticity Guarantee,AU-0011,authentic,0,0.5290049,0.41488953333333334,1
+resnet50,test/authentic/AU-ROL-0097.jpg,0,Rolex,Uncontrolled,eBay Authenticity Guarantee,AU-0011,authentic,0,0.41917235,0.41488953333333334,1
+resnet50,test/authentic/AU-ROL-0098.jpg,0,Rolex,Uncontrolled,eBay Authenticity Guarantee,AU-0011,authentic,0,0.26798248,0.41488953333333334,0
+resnet50,test/authentic/AU-ROL-0099.jpg,0,Rolex,Uncontrolled,eBay Authenticity Guarantee,AU-0011,authentic,0,0.35153365,0.41488953333333334,0
+resnet50,test/authentic/AU-ROL-0100.jpg,0,Rolex,Uncontrolled,eBay Authenticity Guarantee,AU-0011,authentic,0,0.36387292,0.41488953333333334,0
+resnet50,test/authentic/AU-SEI-0276.jpg,8,Seiko,Plain,Brand website,AU-0037,authentic,0,0.30362853,0.41488953333333334,0
+resnet50,test/authentic/AU-SEI-0277.jpg,8,Seiko,Plain,Brand website,AU-0037,authentic,0,0.39589298,0.41488953333333334,0
+resnet50,test/authentic/AU-SEI-0278.jpg,8,Seiko,Plain,Brand website,AU-0037,authentic,0,0.45317107,0.41488953333333334,1
+resnet50,test/authentic/AU-SEI-0279.jpg,8,Seiko,Plain,Brand website,AU-0037,authentic,0,0.15895613,0.41488953333333334,0
+resnet50,test/authentic/AU-SEI-0280.jpg,8,Seiko,Plain,Brand website,AU-0037,authentic,0,0.09790669,0.41488953333333334,0
+resnet50,test/authentic/AU-SEI-0281.jpg,8,Seiko,Plain,Brand website,AU-0037,authentic,0,0.34477428,0.41488953333333334,0
+resnet50,test/authentic/AU-SEI-0282.jpg,8,Seiko,Plain,Brand website,AU-0037,authentic,0,0.4318837,0.41488953333333334,1
+resnet50,test/authentic/AU-SEI-0283.jpg,8,Seiko,Plain,Brand website,AU-0037,authentic,0,0.28836864,0.41488953333333334,0
+resnet50,test/authentic/AU-SEI-0284.jpg,8,Seiko,Plain,Brand website,AU-0037,authentic,0,0.3869372,0.41488953333333334,0
+resnet50,test/authentic/AU-SEI-0285.jpg,8,Seiko,Plain,Brand website,AU-0037,authentic,0,0.3643251,0.41488953333333334,0
+resnet50,test/authentic/AU-SEI-0286.jpg,60,Seiko,Uncontrolled,eBay Authenticity Guarantee,AU-0038,authentic,0,0.34532604,0.41488953333333334,0
+resnet50,test/authentic/AU-SEI-0287.jpg,60,Seiko,Uncontrolled,eBay Authenticity Guarantee,AU-0038,authentic,0,0.34753713,0.41488953333333334,0
+resnet50,test/authentic/AU-SEI-0288.jpg,60,Seiko,Uncontrolled,eBay Authenticity Guarantee,AU-0038,authentic,0,0.43644187,0.41488953333333334,1
+resnet50,test/authentic/AU-SEI-0289.jpg,60,Seiko,Uncontrolled,eBay Authenticity Guarantee,AU-0038,authentic,0,0.5455581,0.41488953333333334,1
+resnet50,test/authentic/AU-SEI-0290.jpg,61,Seiko,Uncontrolled,eBay Authenticity Guarantee,AU-0039,authentic,0,0.58148134,0.41488953333333334,1
+resnet50,test/authentic/AU-SEI-0291.jpg,61,Seiko,Uncontrolled,eBay Authenticity Guarantee,AU-0039,authentic,0,0.33491567,0.41488953333333334,0
+resnet50,test/authentic/AU-SEI-0292.jpg,61,Seiko,Uncontrolled,eBay Authenticity Guarantee,AU-0039,authentic,0,0.4624427,0.41488953333333334,1
+resnet50,test/authentic/AU-SEI-0293.jpg,62,Seiko,Uncontrolled,eBay Authenticity Guarantee,AU-0040,authentic,0,0.57451415,0.41488953333333334,1
+resnet50,test/authentic/AU-SEI-0294.jpg,63,Seiko,Uncontrolled,eBay Authenticity Guarantee,AU-0041,authentic,0,0.5207553,0.41488953333333334,1
+resnet50,test/authentic/AU-SEI-0295.jpg,63,Seiko,Uncontrolled,eBay Authenticity Guarantee,AU-0041,authentic,0,0.60743034,0.41488953333333334,1
+resnet50,test/authentic/AU-SEI-0296.jpg,63,Seiko,Uncontrolled,eBay Authenticity Guarantee,AU-0041,authentic,0,0.49623498,0.41488953333333334,1
+resnet50,test/authentic/AU-SEI-0297.jpg,63,Seiko,Uncontrolled,eBay Authenticity Guarantee,AU-0041,authentic,0,0.5235269,0.41488953333333334,1
+resnet50,test/authentic/AU-SEI-0298.jpg,64,Seiko,Uncontrolled,eBay Authenticity Guarantee,AU-0042,authentic,0,0.4632014,0.41488953333333334,1
+resnet50,test/authentic/AU-SEI-0299.jpg,64,Seiko,Uncontrolled,eBay Authenticity Guarantee,AU-0042,authentic,0,0.4690338,0.41488953333333334,1
+resnet50,test/authentic/AU-SEI-0300.jpg,64,Seiko,Uncontrolled,eBay Authenticity Guarantee,AU-0042,authentic,0,0.53430873,0.41488953333333334,1
+resnet50,test/counterfeit/CF-BRE-0378.jpg,65,Breitling,Uncontrolled,EricTime,CF-0010,counterfeit,1,0.65367985,0.41488953333333334,1
+resnet50,test/counterfeit/CF-BRE-0379.jpg,65,Breitling,Uncontrolled,EricTime,CF-0010,counterfeit,1,0.53367084,0.41488953333333334,1
+resnet50,test/counterfeit/CF-BRE-0380.png,65,Breitling,Uncontrolled,EricTime,CF-0010,counterfeit,1,0.6315943,0.41488953333333334,1
+resnet50,test/counterfeit/CF-BRE-0382.jpg,65,Breitling,Uncontrolled,EricTime,CF-0010,counterfeit,1,0.6801355,0.41488953333333334,1
+resnet50,test/counterfeit/CF-BRE-0383.jpg,65,Breitling,Uncontrolled,EricTime,CF-0010,counterfeit,1,0.6378207,0.41488953333333334,1
+resnet50,test/counterfeit/CF-BRE-0384.jpg,65,Breitling,Uncontrolled,EricTime,CF-0010,counterfeit,1,0.55459106,0.41488953333333334,1
+resnet50,test/counterfeit/CF-BRE-0385.png,65,Breitling,Uncontrolled,EricTime,CF-0010,counterfeit,1,0.31732047,0.41488953333333334,0
+resnet50,test/counterfeit/CF-BRE-0386.png,65,Breitling,Uncontrolled,EricTime,CF-0010,counterfeit,1,0.3443332,0.41488953333333334,0
+resnet50,test/counterfeit/CF-BRE-0387.png,65,Breitling,Uncontrolled,EricTime,CF-0010,counterfeit,1,0.5907202,0.41488953333333334,1
+resnet50,test/counterfeit/CF-BRE-0388.png,65,Breitling,Uncontrolled,EricTime,CF-0010,counterfeit,1,0.6448963,0.41488953333333334,1
+resnet50,test/counterfeit/CF-BRE-0416.webp,8,Breitling,Plain,LuxuryWatch,CF-0012,counterfeit,1,0.353763,0.41488953333333334,0
+resnet50,test/counterfeit/CF-BRE-0417.jpg,8,Breitling,Plain,LuxuryWatch,CF-0012,counterfeit,1,0.40010458,0.41488953333333334,0
+resnet50,test/counterfeit/CF-BRE-0422.jpg,8,Breitling,Plain,LuxuryWatch,CF-0012,counterfeit,1,0.1538032,0.41488953333333334,0
+resnet50,test/counterfeit/CF-BRE-0423.jpg,8,Breitling,Plain,LuxuryWatch,CF-0012,counterfeit,1,0.18025091,0.41488953333333334,0
+resnet50,test/counterfeit/CF-BRE-0424.jpg,8,Breitling,Plain,LuxuryWatch,CF-0012,counterfeit,1,0.42476985,0.41488953333333334,1
+resnet50,test/counterfeit/CF-BRE-0437.jpg,65,Breitling,Plain,EricTime,CF-0010,counterfeit,1,0.38404548,0.41488953333333334,0
+resnet50,test/counterfeit/CF-BRE-0438.jpg,65,Breitling,Plain,EricTime,CF-0010,counterfeit,1,0.4086897,0.41488953333333334,0
+resnet50,test/counterfeit/CF-BRE-0450.jpg,8,Breitling,Plain,ORFactory,CF-0019,counterfeit,1,0.4627461,0.41488953333333334,1
+resnet50,test/counterfeit/CF-BRE-0451.jpg,8,Breitling,Plain,ORFactory,CF-0019,counterfeit,1,0.32477054,0.41488953333333334,0
+resnet50,test/counterfeit/CF-BRE-0454.jpg,8,Breitling,Plain,ORFactory,CF-0019,counterfeit,1,0.4554711,0.41488953333333334,1
+resnet50,test/counterfeit/CF-BRE-0456.jpg,8,Breitling,Plain,ORFactory,CF-0019,counterfeit,1,0.44854704,0.41488953333333334,1
+resnet50,test/counterfeit/CF-BRE-0457.jpg,8,Breitling,Plain,ORFactory,CF-0019,counterfeit,1,0.21717146,0.41488953333333334,0
+resnet50,test/counterfeit/CF-BRE-0469.jpg,36,Breitling,Uncontrolled,WSONGTIME,CF-0003,counterfeit,1,0.66443145,0.41488953333333334,1
+resnet50,test/counterfeit/CF-BRE-0470.jpg,36,Breitling,Uncontrolled,WSONGTIME,CF-0003,counterfeit,1,0.5261602,0.41488953333333334,1
+resnet50,test/counterfeit/CF-BRE-0471.jpg,36,Breitling,Uncontrolled,WSONGTIME,CF-0003,counterfeit,1,0.5997196,0.41488953333333334,1
+resnet50,test/counterfeit/CF-OME-0151.webp,8,Omega,Plain,ORFactory,CF-0019,counterfeit,1,0.32018325,0.41488953333333334,0
+resnet50,test/counterfeit/CF-OME-0152.webp,8,Omega,Plain,ORFactory,CF-0019,counterfeit,1,0.38052872,0.41488953333333334,0
+resnet50,test/counterfeit/CF-OME-0153.webp,8,Omega,Plain,ORFactory,CF-0019,counterfeit,1,0.39152223,0.41488953333333334,0
+resnet50,test/counterfeit/CF-OME-0154.jpg,8,Omega,Plain,ORFactory,CF-0019,counterfeit,1,0.25795195,0.41488953333333334,0
+resnet50,test/counterfeit/CF-OME-0155.jpg,8,Omega,Plain,ORFactory,CF-0019,counterfeit,1,0.17610413,0.41488953333333334,0
+resnet50,test/counterfeit/CF-OME-0156.webp,8,Omega,Plain,ORFactory,CF-0019,counterfeit,1,0.13454832,0.41488953333333334,0
+resnet50,test/counterfeit/CF-OME-0157.webp,8,Omega,Plain,ORFactory,CF-0019,counterfeit,1,0.27367145,0.41488953333333334,0
+resnet50,test/counterfeit/CF-OME-0158.webp,8,Omega,Plain,ORFactory,CF-0019,counterfeit,1,0.24598956,0.41488953333333334,0
+resnet50,test/counterfeit/CF-OME-0159.webp,8,Omega,Plain,ORFactory,CF-0019,counterfeit,1,0.24617071,0.41488953333333334,0
+resnet50,test/counterfeit/CF-OME-0160.webp,8,Omega,Plain,ORFactory,CF-0019,counterfeit,1,0.24131057,0.41488953333333334,0
+resnet50,test/counterfeit/CF-OME-0207.png,65,Omega,Uncontrolled,EricTime,CF-0010,counterfeit,1,0.5887709,0.41488953333333334,1
+resnet50,test/counterfeit/CF-OME-0208.png,65,Omega,Uncontrolled,EricTime,CF-0010,counterfeit,1,0.74054986,0.41488953333333334,1
+resnet50,test/counterfeit/CF-OME-0210.png,65,Omega,Uncontrolled,EricTime,CF-0010,counterfeit,1,0.5987229,0.41488953333333334,1
+resnet50,test/counterfeit/CF-OME-0213.png,65,Omega,Uncontrolled,EricTime,CF-0010,counterfeit,1,0.51924706,0.41488953333333334,1
+resnet50,test/counterfeit/CF-OME-0218.jpeg,8,Omega,Uncontrolled,Community Forums,CF-0014,counterfeit,1,0.48319113,0.41488953333333334,1
+resnet50,test/counterfeit/CF-OME-0230.jpeg,8,Omega,Uncontrolled,Community Forums,CF-0014,counterfeit,1,0.5280923,0.41488953333333334,1
+resnet50,test/counterfeit/CF-ROL-0081.png,65,Rolex,Uncontrolled,EricTime,CF-0010,counterfeit,1,0.7152251,0.41488953333333334,1
+resnet50,test/counterfeit/CF-ROL-0082.png,65,Rolex,Uncontrolled,EricTime,CF-0010,counterfeit,1,0.7305783,0.41488953333333334,1
+resnet50,test/counterfeit/CF-ROL-0089.jpg,65,Rolex,Uncontrolled,EricTime,CF-0010,counterfeit,1,0.3879801,0.41488953333333334,0
+resnet50,test/counterfeit/CF-ROL-0091.jpeg,66,Rolex,Uncontrolled,Community Forums,CF-0011,counterfeit,1,0.50285715,0.41488953333333334,1
+resnet50,test/counterfeit/CF-ROL-0092.jpeg,66,Rolex,Uncontrolled,Community Forums,CF-0011,counterfeit,1,0.6172243,0.41488953333333334,1
+resnet50,test/counterfeit/CF-ROL-0093.jpeg,66,Rolex,Uncontrolled,Community Forums,CF-0011,counterfeit,1,0.42333883,0.41488953333333334,1
+resnet50,test/counterfeit/CF-ROL-0094.jpeg,66,Rolex,Uncontrolled,Community Forums,CF-0011,counterfeit,1,0.31541958,0.41488953333333334,0
+resnet50,test/counterfeit/CF-ROL-0095.webp,8,Rolex,Uncontrolled,LuxuryWatch,CF-0012,counterfeit,1,0.5988988,0.41488953333333334,1
+resnet50,test/counterfeit/CF-ROL-0096.jpg,8,Rolex,Uncontrolled,LuxuryWatch,CF-0012,counterfeit,1,0.58456767,0.41488953333333334,1
+resnet50,test/counterfeit/CF-ROL-0097.jpg,8,Rolex,Uncontrolled,LuxuryWatch,CF-0012,counterfeit,1,0.70962316,0.41488953333333334,1
+resnet50,test/counterfeit/CF-ROL-0098.webp,8,Rolex,Uncontrolled,LuxuryWatch,CF-0012,counterfeit,1,0.6463486,0.41488953333333334,1
+resnet50,test/counterfeit/CF-ROL-0099.webp,8,Rolex,Uncontrolled,LuxuryWatch,CF-0012,counterfeit,1,0.38780627,0.41488953333333334,0
+resnet50,test/counterfeit/CF-ROL-0100.webp,8,Rolex,Uncontrolled,LuxuryWatch,CF-0012,counterfeit,1,0.7776378,0.41488953333333334,1
+resnet50,test/counterfeit/CF-ROL-0101.jpg,8,Rolex,Uncontrolled,LuxuryWatch,CF-0012,counterfeit,1,0.6788595,0.41488953333333334,1
+resnet50,test/counterfeit/CF-ROL-0103.webp,8,Rolex,Uncontrolled,LuxuryWatch,CF-0012,counterfeit,1,0.4988651,0.41488953333333334,1
+resnet50,test/counterfeit/CF-ROL-0104.webp,8,Rolex,Uncontrolled,LuxuryWatch,CF-0012,counterfeit,1,0.48249006,0.41488953333333334,1
+resnet50,test/counterfeit/CF-SEI-0248.jpg,67,Seiko,Uncontrolled,WatchuSeek Forums,CF-0021,counterfeit,1,0.6435533,0.41488953333333334,1
+resnet50,test/counterfeit/CF-SEI-0249.jpg,67,Seiko,Uncontrolled,WatchuSeek Forums,CF-0021,counterfeit,1,0.76803803,0.41488953333333334,1
+resnet50,test/counterfeit/CF-SEI-0250.jpg,67,Seiko,Uncontrolled,WatchuSeek Forums,CF-0021,counterfeit,1,0.43824416,0.41488953333333334,1
+resnet50,test/counterfeit/CF-SEI-0251.jpg,67,Seiko,Uncontrolled,WatchuSeek Forums,CF-0021,counterfeit,1,0.6313671,0.41488953333333334,1
+resnet50,test/counterfeit/CF-SEI-0252.jpg,67,Seiko,Uncontrolled,WatchuSeek Forums,CF-0021,counterfeit,1,0.7634837,0.41488953333333334,1
+resnet50,test/counterfeit/CF-SEI-0253.jpg,67,Seiko,Uncontrolled,WatchuSeek Forums,CF-0021,counterfeit,1,0.6568784,0.41488953333333334,1
+resnet50,test/counterfeit/CF-SEI-0254.jpg,67,Seiko,Uncontrolled,WatchuSeek Forums,CF-0021,counterfeit,1,0.28736767,0.41488953333333334,0
+resnet50,test/counterfeit/CF-SEI-0255.jpeg,67,Seiko,Uncontrolled,WatchuSeek Forums,CF-0021,counterfeit,1,0.55835706,0.41488953333333334,1
+resnet50,test/counterfeit/CF-SEI-0256.jpg,67,Seiko,Uncontrolled,WatchuSeek Forums,CF-0021,counterfeit,1,0.54961044,0.41488953333333334,1
+resnet50,test/counterfeit/CF-SEI-0257.jpg,67,Seiko,Uncontrolled,WatchuSeek Forums,CF-0021,counterfeit,1,0.85848147,0.41488953333333334,1
+resnet50,test/counterfeit/CF-SEI-0258.jpg,67,Seiko,Uncontrolled,WatchuSeek Forums,CF-0021,counterfeit,1,0.6706083,0.41488953333333334,1
+resnet50,test/counterfeit/CF-SEI-0259.jpg,67,Seiko,Uncontrolled,WatchuSeek Forums,CF-0021,counterfeit,1,0.72903776,0.41488953333333334,1
+resnet50,test/counterfeit/CF-SEI-0260.jpg,67,Seiko,Uncontrolled,WatchuSeek Forums,CF-0021,counterfeit,1,0.47985405,0.41488953333333334,1
+resnet50,test/counterfeit/CF-SEI-0261.jpg,67,Seiko,Uncontrolled,WatchuSeek Forums,CF-0021,counterfeit,1,0.6592955,0.41488953333333334,1
+resnet50,test/counterfeit/CF-SEI-0262.jpeg,67,Seiko,Uncontrolled,WatchuSeek Forums,CF-0021,counterfeit,1,0.5779718,0.41488953333333334,1
+resnet50,test/counterfeit/CF-SEI-0263.jpg,67,Seiko,Uncontrolled,WatchuSeek Forums,CF-0021,counterfeit,1,0.7331653,0.41488953333333334,1
+resnet50,test/counterfeit/CF-SEI-0264.jpg,67,Seiko,Uncontrolled,WatchuSeek Forums,CF-0021,counterfeit,1,0.62977463,0.41488953333333334,1
+resnet50,test/counterfeit/CF-SEI-0346.jpg,8,Seiko,Plain,Paterson Jewellers,CF-0022,counterfeit,1,0.40756917,0.41488953333333334,0
+resnet50,test/counterfeit/CF-SEI-0347.jpg,8,Seiko,Plain,Paterson Jewellers,CF-0022,counterfeit,1,0.52623624,0.41488953333333334,1
+resnet50,test/counterfeit/CF-SEI-0348.jpg,8,Seiko,Plain,Paterson Jewellers,CF-0022,counterfeit,1,0.30342212,0.41488953333333334,0
+resnet50,test/counterfeit/CF-SEI-0349.jpg,8,Seiko,Plain,Paterson Jewellers,CF-0022,counterfeit,1,0.16371267,0.41488953333333334,0
+resnet50,test/counterfeit/CF-SEI-0350.jpg,8,Seiko,Plain,Paterson Jewellers,CF-0022,counterfeit,1,0.2867681,0.41488953333333334,0
+resnet50,test/counterfeit/CF-SEI-0352.jpg,8,Seiko,Plain,Paterson Jewellers,CF-0022,counterfeit,1,0.046724956,0.41488953333333334,0
+resnet50,test/counterfeit/CF-SEI-0355.jpg,8,Seiko,Plain,Paterson Jewellers,CF-0022,counterfeit,1,0.30393836,0.41488953333333334,0

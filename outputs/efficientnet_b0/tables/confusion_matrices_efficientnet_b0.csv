@@ -1,0 +1,9 @@
+evaluated_on,true,pred,mean_count
+pooled out-of-fold (mean per seed),authentic,authentic,142.33333333333334
+pooled out-of-fold (mean per seed),authentic,counterfeit,149.66666666666666
+pooled out-of-fold (mean per seed),counterfeit,authentic,105.33333333333333
+pooled out-of-fold (mean per seed),counterfeit,counterfeit,157.66666666666666
+external test (mean per model),authentic,authentic,52.53333333333333
+external test (mean per model),authentic,counterfeit,46.46666666666667
+external test (mean per model),counterfeit,authentic,18.733333333333334
+external test (mean per model),counterfeit,counterfeit,62.266666666666666

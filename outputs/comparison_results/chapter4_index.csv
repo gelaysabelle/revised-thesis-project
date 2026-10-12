@@ -1,0 +1,45 @@
+type,section,file,description
+table,0,tables/t4_0_integrity_checks.csv,Inputs and integrity checks
+figure,4.2.4,figures/f4_2_4_per_fold_auc.png,Per-fold held-out ROC-AUC of the three architectures
+table,4.2.4,tables/t4_2_4_cv_comparison.csv,"Comparative CV summary, three architectures side by side (mean ± sd and bootstrap CI)"
+table,4.2.4,tables/t4_2_4_cv_comparison_numeric.csv,"Comparative CV summary, numeric values"
+table,4.2.4,tables/t4_2_4_per_fold_auc.csv,"Per-fold held-out ROC-AUC (mean, sd and every seed), unstable folds flagged"
+figure,4.3,figures/f4_3_threshold_spread.png,Spread of the frozen threshold per architecture
+table,4.3,tables/t4_3_fixed_thresholds.csv,"Accuracy, precision, recall and F1 at the frozen theta and at 0.3, 0.5, 0.7 for CV runs and final models"
+table,4.3,tables/t4_3_thresholds.csv,"Frozen threshold and its spread over the 15 runs, and the final model threshold"
+figure,4.4,figures/f4_4_confusion_matrices.png,"Confusion matrices on the external test set, three architectures side by side (counts, row percentages)"
+figure,4.4,figures/f4_4_roc_curves.png,"ROC curves of the three architectures on shared axes, pooled out-of-fold and external test (AUC in legend)"
+table,4.4,tables/t4_4_confusion_matrices.csv,Confusion matrices on the external test set: 15-model mean and final model
+table,4.4,tables/t4_4_cv_to_test_drop.csv,Change from the held-out folds to the external test set (positive = lower on test)
+table,4.4,tables/t4_4_test_summary.csv,"External test results: 15-model mean ± sd, bootstrap CIs and the final model, side by side"
+table,4.4,tables/t4_4_test_summary_numeric.csv,"Test results, numeric values"
+figure,4.5,figures/f4_5_paired_differences.png,Paired bootstrap differences between architectures with Holm-adjusted intervals
+table,4.5,tables/t4_5_mcnemar.csv,"McNemar exact tests on the final models (test) and on the out-of-fold predictions of each seed, Holm-corrected"
+table,4.5,tables/t4_5_nadeau_bengio.csv,"Nadeau-Bengio corrected t-test on the 15 paired held-out AUCs, Holm-corrected"
+table,4.5,tables/t4_5_paired_bootstrap.csv,"Paired group bootstrap of A-B differences (ROC-AUC, accuracy, F1, recall), Holm-adjusted intervals and verdicts"
+table,4.5.2,tables/t4_5_2_literature_scaffold.csv,"Scaffold for Table 1: our metrics filled in, literature columns left empty"
+figure,4.5.3,figures/f4_5_3_error_rates.png,False negative and false positive rates by brand and tier on the external test set
+figure,4.5.3,figures/f4_5_3_seller_error_concentration.png,Cumulative share of errors by seller (dotted line = errors spread evenly over sellers)
+table,4.5.3,tables/t4_5_3_error_rates.csv,"False negative and false positive rates by brand, tier, source and label tier, three models"
+table,4.5.3,tables/t4_5_3_hardest_images.csv,"Twenty hardest images per set (most models wrong, then most confidently wrong), for the Grad-CAM discussion"
+table,4.5.3,tables/t4_5_3_missed_counts.csv,"Images missed by none, by only one, by two and by all three architectures"
+table,4.5.3,tables/t4_5_3_missed_images.csv,"Every image missed by at least one model, with brand, tier, source, seller and probabilities"
+table,4.5.3,tables/t4_5_3_seller_concentration.csv,How concentrated the errors are in a few sellers
+table,4.5.3,tables/t4_5_3_seller_summary.csv,Per-seller images and errors for each architecture
+figure,4.6,figures/f4_6_accuracy_efficiency.png,"ROC-AUC against parameters, MACs, GPU latency and model size (filled = test, hollow = held-out folds)"
+figure,4.6,figures/f4_6_latency_cpu_gpu.png,Inference latency on GPU and CPU per architecture
+figure,4.6,figures/f4_6_pareto_alt_framing.png,"Pareto frontier, error and throughput framing"
+figure,4.6,figures/f4_6_pareto_quality_vs_cost.png,Pareto frontier of quality against inference latency and model size
+figure,4.6,figures/f4_6_training_time.png,Training time per epoch and total training time per architecture
+table,4.6,tables/t4_6_accuracy_efficiency.csv,"ROC-AUC next to parameters, MACs, latency and model size"
+table,4.6,tables/t4_6_layer_summary.csv,Per-architecture totals of the per-layer terms and their split by kernel type
+table,4.6,tables/t4_6_layer_terms.csv,Per-layer time (MACs) and space (weights) terms for all three architectures
+table,4.6,tables/t4_6_pareto_deltas.csv,Change in cost and quality relative to the cheapest Pareto-optimal model
+table,4.6,tables/t4_6_pareto_dominance.csv,"Which model dominates which, and whether the quality gap is significant"
+table,4.6,tables/t4_6_pareto_tradeoff.csv,"Pareto analysis: quality, latency, size and Pareto-optimal flags"
+table,4.6,tables/t4_6_table3_complexity.csv,"Combined Table 3: parameters, MACs, latency (GPU and CPU), model size, memory, training time per epoch"
+table,4.6,tables/t4_6_training_time.csv,Training time per epoch and in total per architecture
+table,summary,tables/t4_key_findings.txt,Generated key findings
+table,supplementary,tables/t4_s_brand_website_sensitivity.csv,Results with and without brand-website images
+table,supplementary,tables/t4_s_breakdown_metrics.csv,"All metrics by tier, brand and source for each architecture"
+table,supplementary,tables/t4_s_shortcut_audit.csv,Shortcut audit baselines from the three notebooks side by side

@@ -1,0 +1,13 @@
+view,model_a,model_b,n_images,acc_a,acc_b,only_a_correct,only_b_correct,p_mcnemar,p_holm,verdict
+"final model, external test",resnet50,efficientnet_b0,180,0.6167,0.7056,18,34,0.0365,0.073,no reliable difference
+"final model, external test",resnet50,mobilenet_v2,180,0.6167,0.7222,14,33,0.0079,0.0238,MobileNetV2 better
+"final model, external test",efficientnet_b0,mobilenet_v2,180,0.7056,0.7222,15,18,0.7283,0.7283,no reliable difference
+"out-of-fold, seed 42",resnet50,efficientnet_b0,555,0.6252,0.5369,127,78,0.0008,0.0023,ResNet50 better
+"out-of-fold, seed 42",resnet50,mobilenet_v2,555,0.6252,0.5892,101,81,0.1588,0.1588,no reliable difference
+"out-of-fold, seed 42",efficientnet_b0,mobilenet_v2,555,0.5369,0.5892,57,86,0.0189,0.0378,MobileNetV2 better
+"out-of-fold, seed 1337",resnet50,efficientnet_b0,555,0.6126,0.5387,98,57,0.0012,0.0037,ResNet50 better
+"out-of-fold, seed 1337",resnet50,mobilenet_v2,555,0.6126,0.5928,66,55,0.3634,0.3634,no reliable difference
+"out-of-fold, seed 1337",efficientnet_b0,mobilenet_v2,555,0.5387,0.5928,38,68,0.0046,0.0092,MobileNetV2 better
+"out-of-fold, seed 2024",resnet50,efficientnet_b0,555,0.6,0.5459,121,91,0.0461,0.0923,no reliable difference
+"out-of-fold, seed 2024",resnet50,mobilenet_v2,555,0.6,0.5532,80,54,0.0304,0.0912,no reliable difference
+"out-of-fold, seed 2024",efficientnet_b0,mobilenet_v2,555,0.5459,0.5532,101,105,0.8345,0.8345,no reliable difference

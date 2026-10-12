@@ -1,0 +1,2 @@
+arch,cv_f1,cv_roc_auc,test_f1,test_roc_auc,final_model_test_roc_auc,params_M,flops_M_macs,inference_ms_per_image
+resnet50,0.5287,0.674,0.6263,0.7187,0.7182,23.5101,8341.0964,8.4312

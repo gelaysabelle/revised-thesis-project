@@ -1,0 +1,9 @@
+baseline,n_features,mean_accuracy,sd_accuracy,mean_auc,threshold,flagged
+B1 file size + re-encode ratio,2.0,0.6878858439036231,0.10278559697710235,0.8370698619036514,0.65,True
+"B2 resolution, blur, brightness, colour histogram, JPEG quality",32.0,0.8104622394572358,0.11708953896429423,0.8848111729238933,0.65,True
+B1p file size of the PROCESSED image (what the CNN sees),1.0,0.5094214625487914,0.04961882458608122,0.5707467802636832,0.65,False
+"B2p PROCESSED image: size, sharpness, brightness, contrast, white share, edges, colour histogram",30.0,0.6071111860289972,0.06661445382347565,0.6663106937183757,0.65,False
+B3 mask area + shape,4.0,0.5856622450814933,0.029486667620849845,0.5763400026794988,0.65,False
+B4 background tier alone (metadata),2.0,0.2994395630827016,0.15004562004906408,0.39056273060827384,0.65,False
+"B5 border-only CNN, raw images",,0.6842790644025606,0.1723177371526439,0.7737662138191326,0.65,True
+"B5 border-only CNN, processed images",,0.552034118099273,0.09446697774565804,0.6275558678481916,0.65,False

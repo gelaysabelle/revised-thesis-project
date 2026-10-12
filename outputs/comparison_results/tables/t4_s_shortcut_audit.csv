@@ -1,0 +1,9 @@
+baseline,mean_accuracy_resnet50,mean_accuracy_efficientnet_b0,mean_accuracy_mobilenet_v2,mean_auc_resnet50,mean_auc_efficientnet_b0,mean_auc_mobilenet_v2
+B1 file size + re-encode ratio,0.6879,0.6879,0.6879,0.8371,0.8371,0.8371
+"B2 resolution, blur, brightness, colour histogram, JPEG quality",0.8105,0.8105,0.8105,0.8848,0.8848,0.8848
+B1p file size of the PROCESSED image (what the CNN sees),0.5094,0.5094,0.5094,0.5707,0.5707,0.5707
+"B2p PROCESSED image: size, sharpness, brightness, contrast, white share, edges, colour histogram",0.6071,0.6071,0.6071,0.6663,0.6663,0.6663
+B3 mask area + shape,0.5857,0.5857,0.5857,0.5763,0.5763,0.5763
+B4 background tier alone (metadata),0.2994,0.2994,0.2994,0.3906,0.3906,0.3906
+"B5 border-only CNN, raw images",0.6843,0.6843,0.6843,0.7738,0.7738,0.7738
+"B5 border-only CNN, processed images",0.552,0.552,0.552,0.6276,0.6276,0.6276

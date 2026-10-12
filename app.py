@@ -1,11 +1,10 @@
 import os
-import re
-import sys
 import time
 import io
 import hashlib
 from pathlib import Path
 
+import cv2
 import numpy as np
 import pandas as pd
 import streamlit as st
@@ -16,12 +15,18 @@ import torchvision.models as tv_models
 from PIL import Image
 
 try:
+    from rembg import remove, new_session
+except Exception:
+    remove = None
+    new_session = None
+
+try:
     import psutil
 except Exception:
     psutil = None
 
 
-st.set_page_config(page_title="CNN Comparison: AI Watch Detector", layout="wide")
+st.set_page_config(page_title="Authentic vs Counterfeit Watch Detector", layout="wide")
 
 st.markdown(
     """
@@ -42,25 +47,25 @@ st.markdown(
 
 MODEL_CONFIGS = {
     "ResNet50": {
-        "checkpoint": "outputs/resnet50/checkpoints/resnet50_deployed.pt",
-        "eager_checkpoint": "outputs/eager_checkpoints/resnet50_eager.pth",
-        "default_threshold": 0.356,
-        "test_metrics": "outputs/resnet50/resnet50_test_metrics.csv",
-        "complexity": "outputs/resnet50/resnet50_complexity_metrics.csv",
+        "checkpoint": "outputs/resnet50/final_model/resnet50_final.pt",
+        "eager_checkpoint": "outputs/resnet50/final_model/resnet50_final.pth",
+        "default_threshold": 0.4149,
+        "test_metrics": "outputs/resnet50/tables/table_final_model_resnet50.csv",
+        "complexity": "outputs/resnet50/tables/complexity_resnet50.csv",
     },
     "EfficientNet-B0": {
-        "checkpoint": "outputs/efficientnet_b0/checkpoints/efficientnet_b0_deployed.pt",
-        "eager_checkpoint": "outputs/eager_checkpoints/efficientnet_b0_eager.pth",
-        "default_threshold": 0.188,
-        "test_metrics": "outputs/efficientnet_b0/efficientnet_b0_test_metrics.csv",
-        "complexity": "outputs/efficientnet_b0/efficientnet_b0_complexity_metrics.csv",
+        "checkpoint": "outputs/efficientnet_b0/final_model/efficientnet_b0_final.pt",
+        "eager_checkpoint": "outputs/efficientnet_b0/final_model/efficientnet_b0_final.pth",
+        "default_threshold": 0.3978,
+        "test_metrics": "outputs/efficientnet_b0/tables/table_final_model_efficientnet_b0.csv",
+        "complexity": "outputs/efficientnet_b0/tables/complexity_efficientnet_b0.csv",
     },
     "MobileNetV2": {
-        "checkpoint": "outputs/mobilenet_v2/checkpoints/mobilenet_v2_deployed.pt",
-        "eager_checkpoint": "outputs/eager_checkpoints/mobilenet_v2_eager.pth",
-        "default_threshold": 0.406,
-        "test_metrics": "outputs/mobilenet_v2/mobilenet_v2_test_metrics.csv",
-        "complexity": "outputs/mobilenet_v2/mobilenet_v2_complexity_metrics.csv",
+        "checkpoint": "outputs/mobilenet_v2/final_model/mobilenet_v2_final.pt",
+        "eager_checkpoint": "outputs/mobilenet_v2/final_model/mobilenet_v2_final.pth",
+        "default_threshold": 0.4244,
+        "test_metrics": "outputs/mobilenet_v2/tables/table_final_model_mobilenet_v2.csv",
+        "complexity": "outputs/mobilenet_v2/tables/complexity_mobilenet_v2.csv",
     },
 }
 
@@ -71,23 +76,144 @@ def resolve_path(relative_path):
     return BASE_DIR / relative_path
 
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+MODEL_INPUT_SIZE = 320
+TRIM_STRAP = True
+IMGNET_MEAN = [0.485, 0.456, 0.406]
+IMGNET_STD = [0.229, 0.224, 0.225]
 
 TRANSFORM = transforms.Compose(
     [
-        transforms.Resize((224, 224), interpolation=transforms.InterpolationMode.BILINEAR),
+        transforms.Resize((MODEL_INPUT_SIZE, MODEL_INPUT_SIZE), interpolation=transforms.InterpolationMode.BILINEAR),
         transforms.ToTensor(),
-        transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
+        transforms.Normalize(mean=IMGNET_MEAN, std=IMGNET_STD),
     ]
 )
 
 
+def _largest_connected_component(mask_uint8):
+    mask_uint8 = np.asarray(mask_uint8, dtype=np.uint8)
+    if mask_uint8.size == 0:
+        return mask_uint8
+    num_labels, labels, stats, _ = cv2.connectedComponentsWithStats(mask_uint8, connectivity=8)
+    if num_labels <= 1:
+        return mask_uint8
+    largest_index = 1 + int(np.argmax(stats[1:, cv2.CC_STAT_AREA]))
+    out = np.zeros_like(mask_uint8)
+    out[labels == largest_index] = 255
+    return out
+
+
+def _trim_strap_mask(mask_uint8):
+    if not TRIM_STRAP:
+        return mask_uint8
+    mask_uint8 = np.asarray(mask_uint8, dtype=np.uint8)
+    if mask_uint8.size == 0 or mask_uint8.shape[0] == 0 or mask_uint8.shape[1] == 0:
+        return mask_uint8
+
+    row_coverage = np.sum(mask_uint8 > 0, axis=1)
+    if row_coverage.size == 0:
+        return mask_uint8
+
+    max_width = float(row_coverage.max())
+    if max_width <= 0:
+        return mask_uint8
+
+    candidate_rows = np.where(row_coverage >= 0.7 * max_width)[0]
+    if candidate_rows.size == 0:
+        return mask_uint8
+
+    center_row = int(np.median(candidate_rows))
+    window_height = max(1, int(round(max_width)))
+    top = max(0, center_row - window_height // 2)
+    bottom = min(mask_uint8.shape[0], top + window_height)
+    if bottom - top < max(1, int(round(0.5 * mask_uint8.shape[1]))):
+        return mask_uint8
+
+    trimmed = np.zeros_like(mask_uint8)
+    trimmed[top:bottom, :] = mask_uint8[top:bottom, :]
+    return trimmed
+
+
+def _pad_to_square(image_obj, background_color=(255, 255, 255)):
+    width, height = image_obj.size
+    size = max(width, height)
+    padded = Image.new("RGB", (size, size), color=background_color)
+    offset_left = (size - width) // 2
+    offset_top = (size - height) // 2
+    padded.paste(image_obj, (offset_left, offset_top))
+    return padded
+
+
+@st.cache_resource
+def get_rembg_session():
+    return new_session() if new_session is not None else None
+
+
+def notebook_preprocess_image(image, trim_strap=True):
+    rgb_img = image.convert("RGB") if image.mode != "RGB" else image.copy()
+    width, height = rgb_img.size
+    if min(width, height) < 400:
+        st.warning(
+            "This image fails the notebook's 400 px short-side cleaning gate; it may already be processed or too small for this pipeline."
+        )
+
+    try:
+        if remove is None:
+            raise RuntimeError("rembg backend not available")
+        removed = remove(rgb_img, session=get_rembg_session())
+        if removed.mode in {"RGBA", "LA"}:
+            alpha = np.asarray(removed)[:, :, 3]
+            mask = (alpha > 0).astype(np.uint8) * 255
+        else:
+            arr = np.asarray(removed.convert("RGB"), dtype=np.uint8)
+            gray = cv2.cvtColor(arr, cv2.COLOR_RGB2GRAY)
+            mask = (gray > 10).astype(np.uint8) * 255
+    except Exception:
+        gray = cv2.cvtColor(np.asarray(rgb_img, dtype=np.uint8), cv2.COLOR_RGB2GRAY)
+        _, mask = cv2.threshold(gray, 240, 255, cv2.THRESH_BINARY_INV)
+        if np.all(mask == 0):
+            mask = np.zeros((height, width), dtype=np.uint8)
+
+    if mask.size == 0 or np.all(mask == 0):
+        return rgb_img.resize((MODEL_INPUT_SIZE, MODEL_INPUT_SIZE), Image.Resampling.BILINEAR)
+
+    mask = _largest_connected_component(mask)
+    if trim_strap:
+        mask = _trim_strap_mask(mask)
+
+    ys, xs = np.where(mask > 0)
+    if ys.size == 0 or xs.size == 0:
+        return rgb_img.resize((MODEL_INPUT_SIZE, MODEL_INPUT_SIZE), Image.Resampling.BILINEAR)
+
+    x0, x1 = int(xs.min()), int(xs.max()) + 1
+    y0, y1 = int(ys.min()), int(ys.max()) + 1
+    case_width = max(x1 - x0, y1 - y0)
+    margin = max(1, int(round(0.04 * case_width)))
+    x0 = max(0, x0 - margin)
+    y0 = max(0, y0 - margin)
+    x1 = min(width, x1 + margin)
+    y1 = min(height, y1 + margin)
+
+    crop = rgb_img.crop((x0, y0, x1, y1))
+    crop_arr = np.asarray(crop, dtype=np.uint8)
+    crop_mask = mask[y0:y1, x0:x1]
+    if crop_mask.size == 0:
+        return rgb_img.resize((MODEL_INPUT_SIZE, MODEL_INPUT_SIZE), Image.Resampling.BILINEAR)
+
+    crop_mask = cv2.dilate(crop_mask.astype(np.uint8), np.ones((5, 5), dtype=np.uint8), iterations=1)
+    masked = crop_arr.copy()
+    fg = crop_mask > 0
+    masked[~fg] = 255
+
+    square_crop = _pad_to_square(Image.fromarray(masked, mode="RGB"), background_color=(255, 255, 255))
+    square_crop = square_crop.resize((MODEL_INPUT_SIZE, MODEL_INPUT_SIZE), Image.Resampling.BILINEAR)
+    if min(crop.size) < 320:
+        return rgb_img.resize((MODEL_INPUT_SIZE, MODEL_INPUT_SIZE), Image.Resampling.BILINEAR)
+    return square_crop
+
+
 def sigmoid_scalar(x):
     return float(1.0 / (1.0 + np.exp(-x)))
-
-
-def parse_threshold_number(text):
-    match = re.search(r"\d*\.?\d+", str(text))
-    return float(match.group()) if match else None
 
 
 def _get_out_features(state_dict, keys, default=1):
@@ -161,15 +287,22 @@ def disable_inplace_ops(model):
 def load_models():
     loaded = {}
     missing = []
+    issues = []
     for model_name, cfg in MODEL_CONFIGS.items():
         ckpt = resolve_path(cfg["checkpoint"])
         if not ckpt.exists():
             missing.append(str(ckpt))
             continue
-        model = torch.jit.load(str(ckpt), map_location=DEVICE)
-        model.eval()
-        loaded[model_name] = model
-    return loaded, missing
+        try:
+            model = torch.load(str(ckpt), map_location=DEVICE, weights_only=False)
+            if not isinstance(model, nn.Module):
+                raise TypeError(f"Expected a saved torch.nn.Module, got {type(model).__name__}")
+            model = model.to(DEVICE)
+            model.eval()
+            loaded[model_name] = model
+        except Exception as exc:
+            issues.append(f"[{model_name}] inference checkpoint load issue: {exc}")
+    return loaded, missing, issues
 
 
 @st.cache_resource
@@ -177,6 +310,7 @@ def load_eager_cam_models():
     eager_models = {}
     missing = []
     issues = []
+    thresholds = {}
 
     for model_name, cfg in MODEL_CONFIGS.items():
         eager_path = resolve_path(cfg.get("eager_checkpoint", ""))
@@ -185,52 +319,48 @@ def load_eager_cam_models():
             continue
 
         try:
-            ckpt_obj = torch.load(str(eager_path), map_location=DEVICE)
+            ckpt_obj = torch.load(str(eager_path), map_location=DEVICE, weights_only=True)
             state_dict = normalize_state_dict(ckpt_obj)
             model = build_eager_model(model_name, state_dict).to(DEVICE)
-            load_result = model.load_state_dict(state_dict, strict=False)
+            model.load_state_dict(state_dict, strict=True)
 
             # Some torch/torchvision combinations throw Grad-CAM backward-hook
             # RuntimeError with inplace activations; disable inplace to stabilize.
             disable_inplace_ops(model)
             model.eval()
 
-            missing_keys = list(getattr(load_result, "missing_keys", []))
-            unexpected_keys = list(getattr(load_result, "unexpected_keys", []))
-            if missing_keys or unexpected_keys:
-                issues.append(
-                    f"[{model_name}] eager checkpoint key mismatch. "
-                    f"missing={missing_keys[:6]}, unexpected={unexpected_keys[:6]}"
-                )
-
+            threshold = float(ckpt_obj["threshold"])
+            if not np.isfinite(threshold) or not 0.0 <= threshold <= 1.0:
+                raise ValueError(f"Invalid decision threshold in {eager_path.name}: {threshold}")
             eager_models[model_name] = model
+            thresholds[model_name] = threshold
         except Exception as exc:
             issues.append(f"[{model_name}] eager checkpoint load issue: {exc}")
 
-    return eager_models, missing, issues
+    return eager_models, missing, issues, thresholds
 
 
 @st.cache_data
-def load_offline_metrics():
+def load_offline_metrics(checkpoint_thresholds):
     required_test_cols = {
-        "Threshold (θ)",
-        "Accuracy",
-        "Precision",
-        "Recall",
-        "F1-Score",
-        "ROC-AUC",
+        "threshold",
+        "test_accuracy",
+        "test_precision",
+        "test_recall",
+        "test_f1",
+        "test_roc_auc",
     }
     required_complexity_cols = {
-        "Total Params (M)",
-        "FLOPs (M)",
-        "Model Size (MB)",
-        "Inference Latency (ms/img)",
-        "Training Time (sec/epoch)",
-        "Peak GPU VRAM (MB)",
+        "total_params_M",
+        "flops_M_macs",
+        "model_size_MB",
+        "inference_ms_per_image",
+        "train_min_final_model",
+        "peak_vram_inference_MB",
     }
 
     rows = []
-    threshold_by_model = {}
+    threshold_by_model = dict(checkpoint_thresholds)
     issues = []
 
     for model_name, cfg in MODEL_CONFIGS.items():
@@ -248,34 +378,28 @@ def load_offline_metrics():
                     f"Schema mismatch in {test_path.name}. Missing: {sorted(missing_test_cols)}"
                 )
 
-            opt_row = test_df[
-                test_df["Threshold (θ)"].astype(str).str.contains("Optimal", case=False, na=False)
-            ]
-            selected = opt_row.iloc[0] if not opt_row.empty else test_df.iloc[0]
-
-            thresh_text = selected.get("Threshold (θ)", cfg["default_threshold"])
-            parsed_thresh = parse_threshold_number(thresh_text)
-            if parsed_thresh is None:
-                raise ValueError(f"Could not parse threshold from {test_path.name}: {thresh_text}")
-
-            threshold_by_model[model_name] = float(parsed_thresh)
+            if test_df.empty:
+                raise ValueError(f"No final-model metrics found in {test_path.name}")
+            selected = test_df.iloc[0]
+            table_threshold = float(selected["threshold"])
+            threshold_by_model.setdefault(model_name, table_threshold)
 
             row.update(
                 {
-                    "Threshold Used": float(parsed_thresh),
-                    "Accuracy": float(selected["Accuracy"]),
-                    "Precision": float(selected["Precision"]),
-                    "Recall": float(selected["Recall"]),
-                    "F1-Score": float(selected["F1-Score"]),
-                    "ROC-AUC": float(selected["ROC-AUC"]),
+                    "Threshold Used": threshold_by_model[model_name],
+                    "Accuracy": float(selected["test_accuracy"]),
+                    "Precision": float(selected["test_precision"]),
+                    "Recall": float(selected["test_recall"]),
+                    "F1-Score": float(selected["test_f1"]),
+                    "ROC-AUC": float(selected["test_roc_auc"]),
                 }
             )
         except (FileNotFoundError, ValueError, KeyError, IndexError, pd.errors.ParserError) as exc:
             issues.append(f"[{model_name}] test metrics issue: {exc}")
-            threshold_by_model[model_name] = cfg["default_threshold"]
+            threshold_by_model.setdefault(model_name, cfg["default_threshold"])
             row.update(
                 {
-                    "Threshold Used": cfg["default_threshold"],
+                    "Threshold Used": threshold_by_model[model_name],
                     "Accuracy": np.nan,
                     "Precision": np.nan,
                     "Recall": np.nan,
@@ -296,15 +420,17 @@ def load_offline_metrics():
                     f"Schema mismatch in {complexity_path.name}. Missing: {sorted(missing_complex_cols)}"
                 )
 
+            if complexity_df.empty:
+                raise ValueError(f"No complexity metrics found in {complexity_path.name}")
             complexity_row = complexity_df.iloc[0]
             row.update(
                 {
-                    "Total Params (M)": float(complexity_row["Total Params (M)"]),
-                    "FLOPs (M)": float(complexity_row["FLOPs (M)"]),
-                    "Model Size (MB, CSV)": float(complexity_row["Model Size (MB)"]),
-                    "Latency (ms/img, CSV)": float(complexity_row["Inference Latency (ms/img)"]),
-                    "Training Time (sec/epoch)": float(complexity_row["Training Time (sec/epoch)"]),
-                    "Peak GPU VRAM (MB, CSV)": float(complexity_row["Peak GPU VRAM (MB)"]),
+                    "Total Params (M)": float(complexity_row["total_params_M"]),
+                    "FLOPs (M)": float(complexity_row["flops_M_macs"]),
+                    "Model Size (MB, CSV)": float(complexity_row["model_size_MB"]),
+                    "Latency (ms/img, CSV)": float(complexity_row["inference_ms_per_image"]),
+                    "Training Time (min, CSV)": float(complexity_row["train_min_final_model"]),
+                    "Peak GPU VRAM (MB, CSV)": float(complexity_row["peak_vram_inference_MB"]),
                 }
             )
         except (FileNotFoundError, ValueError, KeyError, IndexError, pd.errors.ParserError) as exc:
@@ -315,7 +441,7 @@ def load_offline_metrics():
                     "FLOPs (M)": np.nan,
                     "Model Size (MB, CSV)": np.nan,
                     "Latency (ms/img, CSV)": np.nan,
-                    "Training Time (sec/epoch)": np.nan,
+                    "Training Time (min, CSV)": np.nan,
                     "Peak GPU VRAM (MB, CSV)": np.nan,
                 }
             )
@@ -336,8 +462,8 @@ def process_rss_mb():
     return psutil.Process(os.getpid()).memory_info().rss / (1024 * 1024)
 
 
-def run_inference_with_empirical_stats(model, pil_image, threshold, repeats=5):
-    tensor_img = TRANSFORM(pil_image).unsqueeze(0).to(DEVICE)
+def run_inference_with_empirical_stats(model, processed_image, threshold, repeats=5):
+    tensor_img = TRANSFORM(processed_image).unsqueeze(0).to(DEVICE)
 
     with torch.no_grad():
         _ = model(tensor_img)
@@ -540,18 +666,21 @@ def format_exc(exc, max_len=180):
     return msg[:max_len] + ("..." if len(msg) > max_len else "")
 
 
-st.title("Analog Watch Authenticity: CNN Comparative Inference")
-st.caption("ResNet50 vs EfficientNet-B0 vs MobileNetV2 | Prediction, quality metrics, compute profile, and explainability")
+st.title("Counterfeit vs Authentic Watch Detection")
+st.caption("Comparative Performance Analysis of ResNet50, EfficientNet-B0, and MobileNetV2 for Detecting Counterfeit Analog Watch Images")
 
-models, missing_checkpoints = load_models()
-eager_cam_models, missing_eager_checkpoints, eager_cam_issues = load_eager_cam_models()
-metrics_df, thresholds, metric_issues = load_offline_metrics()
+models, missing_checkpoints, model_load_issues = load_models()
+eager_cam_models, missing_eager_checkpoints, eager_cam_issues, checkpoint_thresholds = load_eager_cam_models()
+metrics_df, thresholds, metric_issues = load_offline_metrics(checkpoint_thresholds)
 
 if missing_checkpoints:
     st.warning(
         "Missing inference checkpoints:\n- "
         + "\n- ".join(missing_checkpoints)
     )
+
+if model_load_issues:
+    st.error("\n".join(["Inference checkpoint loading issues:", *model_load_issues]))
 
 if metric_issues:
     st.error(
@@ -576,12 +705,6 @@ if eager_cam_issues:
     )
 
 st.markdown(f"**Runtime Device:** {DEVICE}")
-if sys.version_info >= (3, 14):
-    st.warning(
-        "Python 3.14+ is detected. torch.jit.load has limited support on this runtime; "
-        "for reliable deployment, pin Python to 3.11.x in runtime.txt and .python-version."
-    )
-
 col_a, col_b = st.columns([2, 1])
 with col_a:
     uploaded_file = st.file_uploader(
@@ -607,20 +730,21 @@ if uploaded_file is not None:
         st.session_state["analysis_image_key"] = image_key
         st.session_state.pop("analysis_result", None)
 
-    if st.button("Run 3-Model Analysis", type="primary"):
+    if st.button("Run Counterfeit Detection Analysis", type="primary"):
         if not models:
-            st.error("No available checkpoints to run. Please place deployed .pt files in the expected folders.")
+            st.error("No models could be loaded. Check the checkpoint warnings above.")
         else:
             with st.spinner("Running inference and collecting empirical metrics..."):
                 result_rows = []
                 explainability_maps = {}
+                processed_image = notebook_preprocess_image(image, trim_strap=TRIM_STRAP)
                 for model_name, cfg in MODEL_CONFIGS.items():
                     model = models.get(model_name)
                     if model is None:
                         continue
                     inf = run_inference_with_empirical_stats(
                         model=model,
-                        pil_image=image,
+                        processed_image=processed_image,
                         threshold=thresholds.get(model_name, cfg["default_threshold"]),
                         repeats=repeats,
                     )
@@ -686,7 +810,7 @@ if uploaded_file is not None:
                 st.metric("Counterfeit Probability", f"{row['AI Probability'] * 100:.2f}%")
                 st.metric("Decision Threshold", f"{row['Threshold Used']:.3f}")
 
-        st.subheader("Complete Comparison Table")
+        st.subheader("Model Comparison Table")
         st.dataframe(
             final_df,
             width="stretch",
@@ -724,7 +848,7 @@ if uploaded_file is not None:
                 "psutil unavailable. CPU RSS delta metric is disabled in this session."
             )
 
-        st.subheader("Explainability (Grad-CAM)")
+        st.subheader("Explainability Heatmaps")
         st.caption(
             "Use the controls below to adjust overlay visibility instantly without rerunning inference. "
             "True Grad-CAM uses eager .pth checkpoints; fallback uses gradient saliency."
@@ -774,7 +898,7 @@ if uploaded_file is not None:
                 st.markdown(f"**{model_name}**")
                 st.image(saliency_img, caption=explanation_label, width="stretch")
     else:
-        st.info("Run 3-Model Analysis to generate predictions, metrics, and explainability maps.")
+        st.info("Run Counterfeit Detection Analysis to generate predictions, metrics, and explainability maps.")
 
 else:
     st.info("Awaiting sample image.")

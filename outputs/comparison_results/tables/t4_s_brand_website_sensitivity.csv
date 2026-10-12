@@ -1,0 +1,13 @@
+evaluated_on,arch,subset,n_images,accuracy,precision,recall,f1,roc_auc
+pooled out-of-fold,resnet50,all images,555,0.6126,0.6059,0.5222,0.5609,0.7005
+pooled out-of-fold,resnet50,without brand-website images,439,0.5604,0.671,0.5222,0.5873,0.6682
+pooled out-of-fold,efficientnet_b0,all images,555,0.5405,0.513,0.5995,0.5529,0.6452
+pooled out-of-fold,efficientnet_b0,without brand-website images,439,0.5421,0.6224,0.5995,0.6107,0.6184
+pooled out-of-fold,mobilenet_v2,all images,555,0.5784,0.5575,0.5349,0.5459,0.6699
+pooled out-of-fold,mobilenet_v2,without brand-website images,439,0.5596,0.6646,0.5349,0.5927,0.6641
+external test (15 models),resnet50,all images,180,0.6496,0.6015,0.656,0.6276,0.7136
+external test (15 models),resnet50,without brand-website images,141,0.582,0.631,0.656,0.6433,0.6261
+external test (15 models),efficientnet_b0,all images,180,0.6378,0.5727,0.7687,0.6564,0.7631
+external test (15 models),efficientnet_b0,without brand-website images,141,0.6265,0.6473,0.7687,0.7028,0.7049
+external test (15 models),mobilenet_v2,all images,180,0.6619,0.6144,0.6675,0.6398,0.7577
+external test (15 models),mobilenet_v2,without brand-website images,141,0.6402,0.6943,0.6675,0.6807,0.7266
