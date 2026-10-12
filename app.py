@@ -146,7 +146,7 @@ def _pad_to_square(image_obj, background_color=(255, 255, 255)):
 
 @st.cache_resource
 def get_rembg_session():
-    return new_session() if new_session is not None else None
+    return new_session("u2net") if new_session is not None else None
 
 
 def notebook_preprocess_image(image, trim_strap=True):
@@ -157,59 +157,48 @@ def notebook_preprocess_image(image, trim_strap=True):
             "This image fails the notebook's 400 px short-side cleaning gate; it may already be processed or too small for this pipeline."
         )
 
-    try:
-        if remove is None:
-            raise RuntimeError("rembg backend not available")
-        removed = remove(rgb_img, session=get_rembg_session())
-        if removed.mode in {"RGBA", "LA"}:
-            alpha = np.asarray(removed)[:, :, 3]
-            mask = (alpha > 0).astype(np.uint8) * 255
-        else:
-            arr = np.asarray(removed.convert("RGB"), dtype=np.uint8)
-            gray = cv2.cvtColor(arr, cv2.COLOR_RGB2GRAY)
-            mask = (gray > 10).astype(np.uint8) * 255
-    except Exception:
-        gray = cv2.cvtColor(np.asarray(rgb_img, dtype=np.uint8), cv2.COLOR_RGB2GRAY)
-        _, mask = cv2.threshold(gray, 240, 255, cv2.THRESH_BINARY_INV)
-        if np.all(mask == 0):
-            mask = np.zeros((height, width), dtype=np.uint8)
+    def fallback():
+        return _pad_to_square(rgb_img).resize((MODEL_INPUT_SIZE, MODEL_INPUT_SIZE), Image.Resampling.BOX)
 
-    if mask.size == 0 or np.all(mask == 0):
-        return rgb_img.resize((MODEL_INPUT_SIZE, MODEL_INPUT_SIZE), Image.Resampling.BILINEAR)
+    if remove is None:
+        return fallback()
 
-    mask = _largest_connected_component(mask)
+    # Mirrors notebook preprocess_one(): soft alpha mask, >127 binary mask,
+    # largest component, strap trim, 4% margin, alpha-composite on white,
+    # pad to square, INTER_AREA resize.
+    rgb = np.asarray(rgb_img, dtype=np.uint8)
+    alpha8 = np.array(remove(rgb_img, session=get_rembg_session(), only_mask=True))
+    if alpha8.ndim == 3:
+        alpha8 = alpha8[..., 0]
+    binary = (alpha8 > 127).astype(np.uint8)
+    n, lab, stats, _ = cv2.connectedComponentsWithStats(binary, 8)
+    if n <= 1:
+        return fallback()
+    k = 1 + int(np.argmax(stats[1:, cv2.CC_STAT_AREA]))
+    cc = (lab == k).astype(np.uint8)
+    ys, xs = np.where(cc > 0)
+    x0, x1, y0, y1 = int(xs.min()), int(xs.max()), int(ys.min()), int(ys.max())
+    case_w = x1 - x0 + 1
     if trim_strap:
-        mask = _trim_strap_mask(mask)
+        wrow = cc.sum(1)
+        rows = np.where(wrow >= 0.7 * wrow.max())[0]
+        cy = (rows.min() + rows.max()) / 2.0
+        half = wrow.max() / 2.0
+        ty0, ty1 = int(max(y0, round(cy - half))), int(min(y1, round(cy + half)))
+        if ty1 - ty0 + 1 >= 0.5 * case_w:
+            y0, y1 = ty0, ty1
+    mg = int(0.04 * case_w)
+    cx0, cx1 = max(0, x0 - mg), min(width, x1 + mg + 1)
+    cy0, cy1 = max(0, y0 - mg), min(height, y1 + mg + 1)
+    if min(cx1 - cx0, cy1 - cy0) < MODEL_INPUT_SIZE:
+        st.warning("The watch crop is under 320 px; the notebook would have excluded this image.")
 
-    ys, xs = np.where(mask > 0)
-    if ys.size == 0 or xs.size == 0:
-        return rgb_img.resize((MODEL_INPUT_SIZE, MODEL_INPUT_SIZE), Image.Resampling.BILINEAR)
-
-    x0, x1 = int(xs.min()), int(xs.max()) + 1
-    y0, y1 = int(ys.min()), int(ys.max()) + 1
-    case_width = max(x1 - x0, y1 - y0)
-    margin = max(1, int(round(0.04 * case_width)))
-    x0 = max(0, x0 - margin)
-    y0 = max(0, y0 - margin)
-    x1 = min(width, x1 + margin)
-    y1 = min(height, y1 + margin)
-
-    crop = rgb_img.crop((x0, y0, x1, y1))
-    crop_arr = np.asarray(crop, dtype=np.uint8)
-    crop_mask = mask[y0:y1, x0:x1]
-    if crop_mask.size == 0:
-        return rgb_img.resize((MODEL_INPUT_SIZE, MODEL_INPUT_SIZE), Image.Resampling.BILINEAR)
-
-    crop_mask = cv2.dilate(crop_mask.astype(np.uint8), np.ones((5, 5), dtype=np.uint8), iterations=1)
-    masked = crop_arr.copy()
-    fg = crop_mask > 0
-    masked[~fg] = 255
-
-    square_crop = _pad_to_square(Image.fromarray(masked, mode="RGB"), background_color=(255, 255, 255))
-    square_crop = square_crop.resize((MODEL_INPUT_SIZE, MODEL_INPUT_SIZE), Image.Resampling.BILINEAR)
-    if min(crop.size) < 320:
-        return rgb_img.resize((MODEL_INPUT_SIZE, MODEL_INPUT_SIZE), Image.Resampling.BILINEAR)
-    return square_crop
+    alpha = (alpha8.astype(np.float32) / 255.0) * cv2.dilate(cc, np.ones((5, 5), np.uint8)).astype(np.float32)
+    comp = (rgb.astype(np.float32) * alpha[..., None] + 255.0 * (1 - alpha[..., None])).astype(np.uint8)
+    square = _pad_to_square(Image.fromarray(comp[cy0:cy1, cx0:cx1]))
+    return Image.fromarray(
+        cv2.resize(np.asarray(square), (MODEL_INPUT_SIZE, MODEL_INPUT_SIZE), interpolation=cv2.INTER_AREA)
+    )
 
 
 def sigmoid_scalar(x):
